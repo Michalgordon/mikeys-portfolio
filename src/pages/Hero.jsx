@@ -1,4 +1,4 @@
-import ProgressCircle from "./ProgressCircle";
+import ProgressCircle from "../components/ProgressCircle";
 
 const Hero = () => {
   const skills = [
@@ -17,7 +17,7 @@ const Hero = () => {
           </h2>
         </div>
         <div className="flex flex-col self-center gap-5">
-          <h1 className="-ml-16 text-xl">I like playing around with:</h1>
+          <h1 className="-ml-16 text-xl">I like plaqying around with:</h1>
           <div className="flex gap-3">
             {skills.map((skill, index) => (
               <ProgressCircle

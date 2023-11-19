@@ -1,14 +1,12 @@
-import "./App.css";
-import { Hero, Header, Footer } from "./components";
+import { Outlet } from "react-router-dom";
+import { Header, Footer } from "../components";
 
-function App() {
+export default function Root() {
   return (
     <div className="w-full font-poppins flex flex-col h-full bg-gradient-to-r from-beige to-cream">
       <Header></Header>
-      <Hero></Hero>
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   );
 }
-
-export default App;

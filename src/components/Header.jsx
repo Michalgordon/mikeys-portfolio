@@ -1,22 +1,22 @@
 const Header = () => {
   const pages = [
-    { title: "About Me" },
-    { title: "My Experience" },
-    { title: "My Projects" },
-    { title: "Contact me" },
+    { title: "About Me", path: "/about" },
+    { title: "My Experience", path: "/experience" },
+    { title: "My Projects", path: "/projects" },
+    { title: "Contact me", path: "/contact" },
   ];
 
   return (
-    <div className="w-full flex justify-center items-center h-24 border-b-2 border-teal shadow-xl">
-      {pages.map((footerItem, index) => (
-        <button
+    <ul className="w-full flex justify-center items-center h-24 border-b-2 border-teal shadow-xl">
+      {pages.map((page, index) => (
+        <li
           key={index}
           className="uppercase font-medium text-base border-r-2 border-teal px-6 hover:font-semibold last:border-none"
         >
-          {footerItem.title}
-        </button>
+          <a href={page.path}> {page.title}</a>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
