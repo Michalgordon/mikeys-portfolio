@@ -5,15 +5,41 @@
 @tailwind utilities;
 @tailwind variants;
 
+html, body {
+  height: 100%;
+}
 #root {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
 }
 
 li, ul{
   list-style-type: none;
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@layer components {
+input , textarea {
+  @apply border-teal p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
+}
+button, button[type="submit"] {
+  @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
+}
+}
+
 
 
