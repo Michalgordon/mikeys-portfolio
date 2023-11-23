@@ -1,8 +1,11 @@
-import Hero from "./Hero";
-import AboutMe from "./AboutMe"
-import ErrorPage from "./ErrorPage";
-import MyExperience from "./MyExperience"
-import MyProjects from "./MyProjects"
-import ContactMe from "./ContactMe"
+// import Hero from "./Hero";
+import { lazy } from 'react';
+
+const Hero = lazy(() => import('./Hero'));
+const AboutMe = lazy(() => import('./AboutMe'));
+const ErrorPage = lazy(() => import('./ErrorPage'));
+const MyExperience = lazy(() => import('./MyExperience'));
+const MyProjects = lazy(() => import('./MyProjects'));
+const ContactMe = lazy(() => import('./ContactMe'));
 
 export {Hero, AboutMe, MyExperience, MyProjects, ContactMe, ErrorPage}

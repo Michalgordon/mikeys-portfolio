@@ -1,39 +1,35 @@
-import ProgressCircle from "../components/ProgressCircle";
-
+import { Icon } from "../components";
 const Hero = () => {
-  const skills = [
-    { title: "Vue", progress: 90 },
-    { title: "HTML", progress: 90 },
-    { title: "CSS", progress: 90 },
-    { title: "React", progress: 30 },
-  ];
   return (
     <div className="flex flex-grow p-20">
       <div className="flex flex-grow justify-center flex-col gap-24">
         <div className="flex flex-col gap-3">
           <h1 className="text-6xl font-thin">Hi, I'm Mikey!</h1>
-          <h2 className="text-4xl font-semibold pl-20">
-            A Nomadic Frontend Developer
-          </h2>
-        </div>
-        <div className="flex flex-col self-center gap-5">
-          <h1 className="-ml-16 text-xl">I like plaqying around with:</h1>
-          <div className="flex gap-3">
-            {skills.map((skill, index) => (
-              <ProgressCircle
-                key={index}
-                title={skill.title}
-                progress={skill.progress}
-              ></ProgressCircle>
-            ))}
+          <div className="flex flex-col w-fit pl-20 gap-20">
+            <h2 className="text-4xl font-semibold ">
+              A Nomadic Frontend Developer
+            </h2>
+            <div className="flex gap-5 self-center">
+              <Icon className="w-10" name="vuejs"></Icon>
+              <Icon className="w-10" name="react"></Icon>
+              <Icon className="w-10" name="css3-alt"></Icon>
+              <Icon className="w-10" name="html5"></Icon>
+              <Icon className="w-10" name="node-js"></Icon>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-center flex-col">
-        <img
-          className="self-end w-[400px] rounded-[70%]"
-          src="./mikey-animated-profile.png"
-        ></img>
+      <div className="relative flex justify-center flex-col">
+        <div>
+          <img
+            className="z-40 relative self-end w-[400px] rounded-[70%]"
+            src="./mikey-animated-profile-cold.png"
+          ></img>
+          <div className="absolute top-[10%] z-10 text-gray-400 animate-typing overflow-hidden whitespace-nowrap">
+            {"<div className='flex flex-grow p-20'></div>"}
+            {"<div className='flex flex-grow justify-center flex-col gap-24'>"}
+          </div>
+        </div>
       </div>
     </div>
   );

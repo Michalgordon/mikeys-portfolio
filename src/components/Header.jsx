@@ -1,20 +1,27 @@
+import { Link } from "react-router-dom";
+
+import Icon from "./Icon";
 const Header = () => {
   const pages = [
-    { title: "About Me", path: "/about" },
-    { title: "My Experience", path: "/experience" },
-    { title: "My Projects", path: "/projects" },
-    { title: "Contact me", path: "/contact" },
+    { title: "About Me", path: "about" },
+    { title: "My Experience", path: "experience" },
+    { title: "My Projects", path: "projects" },
+    { title: "Contact me", path: "contact" },
   ];
 
   return (
-    <ul className="w-full flex justify-center items-center h-24 border-b-2 border-teal shadow-xl">
+    <ul className="w-full flex items-center px-10 h-24 border-b-2 border-teal shadow-xl">
+      <Link className="mr-auto" to="/">
+        <Icon className="w-8 h-8" name="home-solid"></Icon>
+      </Link>
       {pages.map((page, index) => (
-        <li
+        <Link
           key={index}
           className="uppercase font-medium text-base border-r-2 border-teal px-6 hover:font-semibold last:border-none"
+          to={page.path}
         >
-          <a href={page.path}> {page.title}</a>
-        </li>
+          {page.title}
+        </Link>
       ))}
     </ul>
   );

@@ -1,5 +1,5 @@
 import Header from "./Header"
 import Footer from "./Footer"
-import ProgressCircle from "./ProgressCircle";
-
-export { Header, Footer, ProgressCircle}
+import ProgressCircle from "./LevelOfExpertise";
+import Icon from "./Icon"
+export { Header, Footer, ProgressCircle, Icon}
