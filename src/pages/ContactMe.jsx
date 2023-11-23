@@ -58,7 +58,6 @@ const ContactMe = () => {
           ></textarea>
         </div>
         <button
-          action={handleSubmit}
           type="submit"
           className="flex justify-self-end justify-center items-center gap- w-fit ml-auto"
         >
