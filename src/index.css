@@ -12,6 +12,7 @@ html, body {
   width: 100vw;
   height: 100%;
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -32,12 +33,70 @@ input::-webkit-inner-spin-button {
 }
 
 
+
 @layer components {
 input , textarea {
   @apply border-teal p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
 }
 button, button[type="submit"] {
   @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
+}
+.timeline{
+  --timeline-width: 8px;
+  --arrow-correction-top: 28px;
+  --content-padding-y: 10px;
+  --content-padding-x: 40px;
+  --circle-w: 28px;
+  --circle-border: 4px;
+  --circle-right-correction: calc((var(--circle-w)/2) ) ;
+  --right-correction: calc(var(--timeline-width) + var(--circle-border));
+
+  --circle-top-correction: calc(var(--content-padding-y) + var(--arrow-correction-top));
+  @apply relative m-[0_auto]
+}
+.timeline::after {
+  @apply content-[''] absolute w-[var(--timeline-width)] bg-teal top-0 bottom-0 left-1/2 -ml-1 
+}
+
+/* Container around content */
+.timeline-container {
+  @apply relative w-1/2 py-[var(--content-padding-y)] px-[var(--content-padding-x)]
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  border-width: var(--circle-border);
+  @apply content-['']	absolute rounded-full z-10 w-[var(--circle-w)] -right-[var(--circle-right-correction)] top-[var(--circle-top-correction)] aspect-square bg-white border-teal 
+}
+
+.timeline-container--left {
+  @apply left-0
+}
+
+/* Place the container to the right */
+.timeline-container--right {
+  @apply left-1/2
+}
+/* Fix the circle for containers on the right side */
+.timeline-container--right::after {
+  @apply -left-[var(--circle-right-correction)]
+  
+}
+/* Add arrows to the left container (pointing right) */
+.border-arrow{
+  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal  rotate-45 bg-white top-[var(--arrow-correction-top)];
+
+}
+.border-arrow--left::before {
+  @apply border-arrow border-b-0 border-l-0 -right-[var(--right-correction)];
+   
+}
+
+/* Add arrows to the right container (pointing left) */
+.border-arrow--right::before {
+  left: -12px;
+  @apply border-arrow border-t-0 border-r-0;
+
 }
 }
 
