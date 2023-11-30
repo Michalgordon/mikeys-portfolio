@@ -11,20 +11,18 @@ const ExperienceCard = ({
 }) => {
   return (
     <div
-      className={`flex flex-col p-4 rounded-xl text-sm shadow-md gap-2 ${className} `}
+      className={`group flex flex-col justify-center p-4 rounded-xl text-sm shadow-md ${className} `}
     >
-      <div className="flex justify-between">
-        <div className="basis-2/3 capitalize">
-          <h1 className="text-xl font-thin">{title}</h1>
+      <div className="relative overflow-hidden capitalize flex flex-col ">
+        <div className="">
+          <div className="text-xs">{timeLine}</div>
+          <h1 className="text-xl uppercase font-thin">{title}</h1>
           <div className="text-sm font-semibold">{company}</div>
-        </div>
-        <div className="text-xs">
-          <div>{timeLine}</div>
-          <div>{location}</div>
+          <div className="text-xs">{location}</div>
         </div>
       </div>
       <div>
-        <div className="text-base">{info}</div>
+        <div className=" text-base whitespace-normal">{info}</div>
       </div>
     </div>
   );

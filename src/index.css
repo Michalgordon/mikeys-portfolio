@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@200;300;400;500;600;700;800;900&display=swap");
+
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +14,6 @@ html, body {
   width: 100vw;
   height: 100%;
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -43,16 +44,20 @@ button, button[type="submit"] {
 }
 .timeline{
   --timeline-width: 8px;
-  --arrow-correction-top: 28px;
   --content-padding-y: 10px;
   --content-padding-x: 40px;
-  --circle-w: 28px;
+  --arrow-top-correction: 28px;
+  --circle-w: 40px;
+  --icon-w: 28px;
   --circle-border: 4px;
   --circle-right-correction: calc((var(--circle-w)/2) ) ;
   --right-correction: calc(var(--timeline-width) + var(--circle-border));
+  --circle-top-correction: calc(var(--arrow-top-correction));
+  --icon-top-correction: calc(var(--arrow-top-correction) + ((var(--circle-w) - var(--icon-w))/2));
+  --icon-right-correction: calc(var(--circle-right-correction) - ((var(--circle-w) - var(--icon-w))/2));
 
-  --circle-top-correction: calc(var(--content-padding-y) + var(--arrow-correction-top));
-  @apply relative m-[0_auto]
+
+  @apply relative flex flex-col w-full justify-center
 }
 .timeline::after {
   @apply content-[''] absolute w-[var(--timeline-width)] bg-teal top-0 bottom-0 left-1/2 -ml-1 
@@ -60,7 +65,7 @@ button, button[type="submit"] {
 
 /* Container around content */
 .timeline-container {
-  @apply relative w-1/2 py-[var(--content-padding-y)] px-[var(--content-padding-x)]
+  @apply relative basis-1/2 flex flex-grow py-[var(--content-padding-y)] px-[var(--content-padding-x)]
 }
 
 /* The circles on the timeline */
@@ -68,14 +73,24 @@ button, button[type="submit"] {
   border-width: var(--circle-border);
   @apply content-['']	absolute rounded-full z-10 w-[var(--circle-w)] -right-[var(--circle-right-correction)] top-[var(--circle-top-correction)] aspect-square bg-white border-teal 
 }
+.timeline-icon{
+  @apply absolute z-20 top-[var(--icon-top-correction)] 
 
+}
+.timeline-icon--right{
+    @apply -left-[var(--icon-right-correction)] 
+}
+.timeline-icon--left{
+  @apply -right-[var(--icon-right-correction)] 
+
+}
 .timeline-container--left {
-  @apply left-0
+  @apply right-1/2
 }
 
 /* Place the container to the right */
 .timeline-container--right {
-  @apply left-1/2
+  @apply left-0
 }
 /* Fix the circle for containers on the right side */
 .timeline-container--right::after {
@@ -84,19 +99,28 @@ button, button[type="submit"] {
 }
 /* Add arrows to the left container (pointing right) */
 .border-arrow{
-  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal  rotate-45 bg-white top-[var(--arrow-correction-top)];
+  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal  rotate-45 bg-white top-[var(--arrow-top-correction)];
 
 }
 .border-arrow--left::before {
   @apply border-arrow border-b-0 border-l-0 -right-[var(--right-correction)];
    
 }
-
 /* Add arrows to the right container (pointing left) */
 .border-arrow--right::before {
   left: -12px;
   @apply border-arrow border-t-0 border-r-0;
 
+}
+.timeline-pictures{
+  @apply relative flex basis-1/2 py-[var(--content-padding-y)] px-[var(--content-padding-x)]
+}
+.timeline-pictures--right{
+  @apply left-1/2
+   
+}
+.timeline-pictures--left{
+@apply justify-end
 }
 }
 

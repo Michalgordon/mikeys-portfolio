@@ -17,7 +17,7 @@ const ContactMe = () => {
 
   return (
     <div className="flex flex-col h-full gap-20 pt-20">
-      <h1 className="text-center text-4xl">
+      <h1 className="text-center text-5xl font-thin">
         I'm always excited to hear from new people <br></br> and tackle new
         challenges!
       </h1>

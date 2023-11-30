@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins"],
+        kalam: ["Kalam"]
       },
       screens: {
         'tall': { 'raw': '(min-height: 800px)' },
