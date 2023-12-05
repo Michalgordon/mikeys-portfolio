@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="w-full font-poppins flex flex-col h-full bg-white">
       <Header></Header>
-      <div className="overflow-auto h-full">
+      <div className="overflow-auto flex flex-grow">
         <Suspense fallback={<div>loading...</div>}>
           <Outlet></Outlet>
         </Suspense>
