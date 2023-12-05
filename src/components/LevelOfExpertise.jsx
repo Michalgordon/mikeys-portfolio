@@ -21,20 +21,21 @@ const LevelOfExpertise = ({ title, level }) => {
   //         </div>
 
   return (
-    <div className="inline-flex flex-col items-center">
-      <h1 className="capitalize font-semibold text-xl">{title}</h1>
-
+    <div className="inline-flex items-center gap-1">
       <div className="flex items-center justify-center">
         {[...Array(level).keys()].map((index) => {
+          let rotate = "[45deg]";
           return (
             <Icon
               key={index}
-              className="relative w-3 color-yellow-500"
+              className={`relative w-2 rotate-${rotate}`}
+              fill="orange"
               name="bolt"
             ></Icon>
           );
         })}
       </div>
+      <h1 className="capitalize font-thin text-sm">{title}</h1>
     </div>
   );
 };
