@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import Icon from "./Icon";
+//todo change component name to skill set or something like that
+//todo add rotation to bolts or some animation?
 const LevelOfExpertise = ({ title, level }) => {
   // const skills = [
   //   { title: "Vue", level: 3 },
@@ -35,7 +37,7 @@ const LevelOfExpertise = ({ title, level }) => {
           );
         })}
       </div>
-      <h1 className="capitalize font-thin text-sm">{title}</h1>
+      <h1 className="capitalize font-medium text-sm">{title}</h1>
     </div>
   );
 };
