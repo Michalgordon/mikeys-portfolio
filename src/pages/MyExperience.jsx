@@ -1,5 +1,14 @@
 import { ExperienceCard, Icon } from "../components";
 const MyExperience = () => {
+  //TODO: add underline under title that connects to timeline
+  //TODO change computer icon to van
+  //TODO change paradox icon to enzo
+  //TODO change volunteering icon (wix?)
+  //TODO find correct images
+  //TODO edit all copy
+  //add last timeline element
+  //TODO add some kind of gradient effect to timeline to create movement
+
   const experience = [
     {
       timeLine: "2022 - now",
