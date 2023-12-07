@@ -6,8 +6,7 @@ const Icon = (props) => {
   return (
     <ReactSVG
       src={`src/assets/icons/${props.name}.svg`}
-      {...props}
-      className={props.className}
+      className={`${props.className}`}
       style={{
         fill: props.fill,
         className: props.className,
@@ -21,4 +20,5 @@ Icon.propTypes = {
   fill: PropTypes.string,
   className: PropTypes.string,
 };
+
 export default Icon;

@@ -23,12 +23,8 @@ const Hero = () => {
         <div>
           <img
             className="z-40 relative self-end w-[400px] rounded-[70%]"
-            src="./mikey-animated-profile-cold.png"
+            src="./mikey-animated-profile.png"
           ></img>
-          <div className="absolute top-[10%] z-10 text-gray-400 animate-typing overflow-hidden whitespace-nowrap">
-            {"<div className='flex flex-grow p-20'></div>"}
-            {"<div className='flex flex-grow justify-center flex-col gap-24'>"}
-          </div>
         </div>
       </div>
     </div>

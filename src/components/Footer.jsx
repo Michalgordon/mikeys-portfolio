@@ -31,10 +31,13 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           download={footerItem.download}
-          className="flex flex-col justify-center items-center uppercase text-sm border-r-2 border-teal cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
+          className="group flex flex-col justify-center items-center uppercase text-sm border-r-2 border-teal cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
         >
-          <Icon name={footerItem.iconName} className="w-8"></Icon>
-          <a>{footerItem.title}</a>
+          <Icon
+            name={footerItem.iconName}
+            className="w-8 group-hover:[filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]"
+          ></Icon>
+          <h1>{footerItem.title}</h1>
         </a>
       ))}
     </div>
