@@ -26,7 +26,8 @@ export default {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        typing: 'typing 3.5s steps(40, end) infinite'
+        typing: 'typing 3.5s steps(40, end) infinite',
+        scroll: 'scroll 25s linear infinite'
       },
       keyframes: {
         wiggle: {
@@ -36,7 +37,10 @@ export default {
         typing:{
           '0%': { width: '0%' },
           '100%': { width: '100%' },
-
+        },
+         scroll: {
+          from: { transform: ' translateX(0)' },
+          to: { transform: ' translateX(-100%)' },
         }
       }
 

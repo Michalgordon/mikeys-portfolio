@@ -1,4 +1,4 @@
-import LevelOfExpertise from "../components/LevelOfExpertise";
+import Skill from "../components";
 
 const AboutMe = () => {
   const skills = [
@@ -17,6 +17,28 @@ const AboutMe = () => {
 
   return (
     <div className="flex flex-col flex-grow gap-16 px-10 py-16">
+      <div className="absolute overflow-hidden  right-0 top-[96px] w-1/3 h-[500px]">
+        <div className="rotate-45 w-full inline-flex flex-nowrap gap-7">
+          <div className="bg-teal-300 h-12 flex gap-7 animate-scroll translate-y-[300%]">
+            {skills.map((skill, index) => (
+              <Skill
+                key={index}
+                title={skill.title}
+                level={skill.level}
+              ></Skill>
+            ))}
+          </div>
+          <div className="bg-teal-300 h-12 flex gap-7 animate-scroll translate-y-[300%]">
+            {skills.map((skill, index) => (
+              <Skill
+                key={index}
+                title={skill.title}
+                level={skill.level}
+              ></Skill>
+            ))}
+          </div>
+        </div>
+      </div>
       <h1
         className="pl-10 text-5xl 
        font-thin"
@@ -48,15 +70,6 @@ const AboutMe = () => {
         </p>
       </div>
       {/* to do: move banner to right corner, add loop */}
-      <div className="flex mt-auto w-full justify-between p-3 gap-7 bg-teal-300">
-        {skills.map((skill, index) => (
-          <LevelOfExpertise
-            key={index}
-            title={skill.title}
-            level={skill.level}
-          ></LevelOfExpertise>
-        ))}
-      </div>
     </div>
   );
 };
