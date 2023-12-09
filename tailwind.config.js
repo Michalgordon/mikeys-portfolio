@@ -24,10 +24,15 @@ export default {
         'tall': { 'raw': '(min-height: 800px)' },
         // => @media (min-height: 800px) { ... }
       },
+      rotate: {
+        '20': '20deg',
+        '35': '35deg',
+      },
+
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         typing: 'typing 3.5s steps(40, end) infinite',
-        scroll: 'scroll 25s linear infinite'
+        "infinite-scroll": 'infinite-scroll 25s linear infinite'
       },
       keyframes: {
         wiggle: {
@@ -38,7 +43,7 @@ export default {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
         },
-         scroll: {
+        "infinite-scroll": {
           from: { transform: ' translateX(0)' },
           to: { transform: ' translateX(-100%)' },
         }
