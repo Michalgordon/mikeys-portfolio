@@ -1,6 +1,7 @@
 import Header from "./Header"
 import Footer from "./Footer"
-import ProgressCircle from "./LevelOfExpertise";
+import Skill from "./Skill";
 import Icon from "./Icon"
 import ExperienceCard from "./ExperienceCard";
-export { Header, Footer, ProgressCircle, Icon, ExperienceCard}
+import ScrollingBanner from "./ScrollingBanner";
+export { Header, Footer, Skill, Icon, ExperienceCard, ScrollingBanner}
