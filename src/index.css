@@ -55,13 +55,29 @@ button, button[type="submit"] {
   --circle-top-correction: calc(var(--arrow-top-correction));
   --icon-top-correction: calc(var(--arrow-top-correction) + ((var(--circle-w) - var(--icon-w))/2));
   --icon-right-correction: calc(var(--circle-right-correction) - ((var(--circle-w) - var(--icon-w))/2));
-
-
-  @apply relative flex flex-col w-full justify-center
+  @apply relative flex flex-col w-full justify-center pt-16
 }
 .timeline::after {
-  @apply content-[''] absolute w-[var(--timeline-width)] bg-teal top-0 bottom-0 left-1/2 -ml-1 
+  --angle: 0deg;
+  border: var(--timeline-width) solid transparent;
+  border-bottom: none ;
+  border-left: none;
+  border-image-slice: 1;
+  /* border-image: linear-gradient(var(--angle),#97A79C, gray) 1; */
+  background: linear-gradient(var(--angle), rgba(151, 167, 156, 0.5), #97A79C) border-box; 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) padding-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; 
+          mask-composite: exclude; 
+  @apply  content-[''] absolute w-1/2 rounded-tr-[7rem] top-0 bottom-0 right-1/2 -mr-1 animate-gradient 
 }
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 
 /* Container around content */
 .timeline-container {

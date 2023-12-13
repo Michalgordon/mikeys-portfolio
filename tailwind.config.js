@@ -32,7 +32,8 @@ export default {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         typing: 'typing 3.5s steps(40, end) infinite',
-        "infinite-scroll": 'infinite-scroll 25s linear infinite'
+        "infinite-scroll": 'infinite-scroll 25s linear infinite',
+        gradient: "gradient 5s linear normal"
       },
       keyframes: {
         wiggle: {
@@ -46,6 +47,11 @@ export default {
         "infinite-scroll": {
           from: { transform: ' translateX(0)' },
           to: { transform: ' translateX(-100%)' },
+        },
+        "gradient":{
+          to :{
+            "--angle": "360deg"
+          }
         }
       }
 

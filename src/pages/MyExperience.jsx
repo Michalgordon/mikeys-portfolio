@@ -1,6 +1,5 @@
 import { ExperienceCard, Icon } from "../components";
 const MyExperience = () => {
-  //TODO: add underline under title that connects to timeline
   //TODO change computer icon to van
   //TODO change paradox icon to enzo
   //TODO change volunteering icon (wix?)
@@ -64,10 +63,10 @@ const MyExperience = () => {
     },
   ];
   const getOrientation = (index) => {
-    return (index + 1) % 2 == 0 ? "left" : "right";
+    return (index + 1) % 2 == 0 ? "right" : "right";
   };
   return (
-    <div className="flex flex-col gap-16 px-10 py-16 overflow-auto">
+    <div className="flex flex-col gap-5 px-10 py-16 overflow-auto">
       <div className="flex pl-10 justify-start">
         <h1 className="text-5xl font-thin">What I've been up to</h1>
       </div>
