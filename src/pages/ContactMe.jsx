@@ -1,18 +1,28 @@
+import React, { useRef } from "react";
 import { Icon } from "../components";
+import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const form = useRef();
 
-    const inputs = event.target.elements;
-    const data = {};
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].name) {
-        data[inputs[i].name] = inputs[i].value;
-      }
-    }
-    console.log(JSON.stringify(data));
+    emailjs
+      .sendForm(
+        "service_yw9f5jn", //service id
+        "template_9iyz96m", //template id
+        form.current,
+        "pA4Tk0FGJWjYeDvdj" //public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -23,18 +33,16 @@ const ContactMe = () => {
       </h1>
 
       <form
+        ref={form}
         className="flex flex-col gap-4 px-32 flex-grow"
-        // onSubmit={handleSubmit}
-        action="mailto:michalgordon92@gmail.com"
-        method="post"
-        encType="text/plain"
+        onSubmit={sendEmail}
       >
         <div className="flex gap-4">
           <div className="flex flex-col gap-4 basis-1/3">
             <input
               type="text"
               placeholder="Name"
-              name="name"
+              name="from_name"
               className="input"
               maxLength="160"
               required
@@ -42,7 +50,7 @@ const ContactMe = () => {
             <input
               type="text"
               placeholder="Email"
-              name="email"
+              name="reply_to"
               className="input"
               maxLength="160"
               required
@@ -59,7 +67,7 @@ const ContactMe = () => {
         </div>
         <button
           type="submit"
-          className="flex justify-self-end justify-center items-center gap- w-fit ml-auto"
+          className="-left-1/3 overflow-hidden flex justify-self-end justify-center items-center gap- w-fit ml-auto animate-slide-out-and-back-right"
         >
           send
           <Icon name="paper-plane" fill="white" className="w-6"></Icon>

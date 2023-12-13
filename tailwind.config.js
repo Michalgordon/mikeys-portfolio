@@ -33,7 +33,8 @@ export default {
         wiggle: 'wiggle 1s ease-in-out infinite',
         typing: 'typing 3.5s steps(40, end) infinite',
         "infinite-scroll": 'infinite-scroll 25s linear infinite',
-        gradient: "gradient 5s linear normal"
+        gradient: "gradient 5s linear normal",
+        "slide-out-and-back-right" : "slide-out-and-back-right 5s linear 5s normal"
       },
       keyframes: {
         wiggle: {
@@ -52,6 +53,14 @@ export default {
           to :{
             "--angle": "360deg"
           }
+        },
+        "slide-out-and-back-right": {
+            from: {
+              left: "-30%"
+            },
+            to: {
+              left: "100%"
+            }
         }
       }
 
