@@ -16,7 +16,7 @@ const MyExperience = () => {
       title: "doing my own thing",
       info: "working on my portfolio, learning react and looking for a job!",
       imgSrc: "public/vanlife-2.jpg",
-      iconName: "laptop-code-solid",
+      iconName: "shuttle-van-solid",
     },
     {
       timeLine: "2020 - 2022",
@@ -25,7 +25,7 @@ const MyExperience = () => {
       title: "Full Stack developer",
       info: "I started as employee number 7 at Spetz, a small start up in tel aviv. A year later, we were acquired by Paradox! ",
       imgSrc: "public/paradox.jpeg",
-      iconName: "vuejs",
+      iconName: "laptop-code-solid",
     },
     {
       timeLine: "2017 - 2020",
@@ -43,7 +43,7 @@ const MyExperience = () => {
       title: "Volunteering",
       info: "A web designer for a cooperative initiative between “Atidim”, Google and Wix for the development of peripheral businesses in the Jerusalem area.",
       imgSrc: "",
-      iconName: "vuejs",
+      iconName: "wix",
     },
     {
       timeLine: "2010 - 2013",
