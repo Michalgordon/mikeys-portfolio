@@ -20,11 +20,11 @@ const Skill = ({ title, level }) => {
 
   return (
     <div className="inline-flex items-center gap-1 mx-4">
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         {[...Array(level).keys()].map((index) => {
           return renderIcon(index);
         })}
-      </div>
+      </div> */}
       <h1 className="capitalize font-medium text-sm whitespace-nowrap	">
         {title}
       </h1>
