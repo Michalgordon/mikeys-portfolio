@@ -1,13 +1,31 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Icon } from "../components";
 import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
   const form = useRef();
+  const FORM_STATUSES = {
+    INITIAL: "initial",
+    SENDING: "sending",
+    SUCCESS: "success",
+    FAILED: "failed",
+  };
+  const [currentEmailStatus, setCurrentEmailStatus] = useState(
+    FORM_STATUSES.INITIAL
+  );
+  const buttonStatus = {
+    [FORM_STATUSES.SUCCESS]: {
+      text: "sent",
+      icon: "thumbs-up-solid",
+    },
+    [FORM_STATUSES.FAILED]: { text: "Try Again", icon: "redo-alt-solid" },
+    [FORM_STATUSES.SENDING]: { text: "sending", icon: "three-dots-loading" },
+    [FORM_STATUSES.INITIAL]: { text: "send", icon: "paper-plane" },
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setCurrentEmailStatus(FORM_STATUSES.SENDING);
     emailjs
       .sendForm(
         "service_yw9f5jn", //service id
@@ -16,13 +34,21 @@ const ContactMe = () => {
         "pA4Tk0FGJWjYeDvdj" //public key
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          setCurrentEmailStatus(FORM_STATUSES.SUCCESS);
+          setTimeout(() => {
+            resetForm();
+          }, 3000);
         },
         (error) => {
+          setCurrentEmailStatus(FORM_STATUSES.FAILED);
           console.log(error.text);
         }
       );
+  };
+  const resetForm = () => {
+    form.current.reset();
+    setCurrentEmailStatus(FORM_STATUSES.INITIAL);
   };
 
   return (
@@ -67,10 +93,14 @@ const ContactMe = () => {
         </div>
         <button
           type="submit"
-          className="-left-1/3 overflow-hidden flex justify-self-end justify-center items-center gap- w-fit ml-auto animate-slide-out-and-back-right"
+          className="group -left-1/3 overflow-hidden flex justify-self-end justify-center items-center gap- w-fit ml-auto hover:shadow-lg"
         >
-          send
-          <Icon name="paper-plane" fill="white" className="w-6"></Icon>
+          {buttonStatus[currentEmailStatus].text}
+          <Icon
+            name={buttonStatus[currentEmailStatus].icon}
+            fill="white"
+            className="w-6 group-hover:animate-wiggle"
+          ></Icon>
         </button>
       </form>
     </div>
