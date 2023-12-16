@@ -1,5 +1,57 @@
+import { ProjectCard } from "../components";
+const PROJECTS = [
+  {
+    title: "botanica",
+    imgSrc: "public/botanica.png",
+    links: [
+      {
+        title: "GitHub",
+        iconName: "github",
+        href: "https://github.com/Michalgordon",
+        download: false,
+      },
+      {
+        title: "Website",
+        iconName: "external-link-alt-solid",
+        href: "",
+        download: false,
+      },
+    ],
+    info: "A responsive website I developed using a friend's design!",
+  },
+  {
+    title: "WhatsApp Extension",
+    imgSrc: "public/whatsapp-extension.png",
+    links: [
+      {
+        title: "Geektime",
+        iconName: "external-link-alt-solid",
+        href: "https://www.geektime.co.il/chrome-whatsapp-messages/?fbclid=IwAR01mMmlvUkjOMvnK0bSllA6PLHkm2dxmXuLoe3axdjPR-tBpmLqoLPOpKs",
+        download: false,
+      },
+      {
+        title: "Store",
+        iconName: "chrome",
+        href: "https://chromewebstore.google.com/detail/olivia-for-recruiters/ldcjdglgbpfldnfebjkejpppfiedkkec?hl=en-GB",
+        download: false,
+      },
+    ],
+    info: "A chrome extension using WhatsApp API written about in Geektime magazine!",
+  },
+];
 const MyProjects = () => {
-  return <div className="flex flex-grow">MyProjects </div>;
+  return (
+    <div className="flex flex-col flex-grow gap-16 px-10 py-16">
+      <div className="flex pl-10 justify-start">
+        <h1 className="text-5xl font-thin">My Projects</h1>
+      </div>
+      <div className="flex justify-center gap-8">
+        {PROJECTS.map((project, index) => (
+          <ProjectCard key={index} {...project}></ProjectCard>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 //TODO add chrome extension here

@@ -4,4 +4,5 @@ import Skill from "./Skill";
 import Icon from "./Icon"
 import ExperienceCard from "./ExperienceCard";
 import ScrollingBanner from "./ScrollingBanner";
-export { Header, Footer, Skill, Icon, ExperienceCard, ScrollingBanner}
+import ProjectCard from "./ProjectCard";
+export { Header, Footer, Skill, Icon, ExperienceCard, ScrollingBanner, ProjectCard}
