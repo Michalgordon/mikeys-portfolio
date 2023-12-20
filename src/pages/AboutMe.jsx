@@ -16,8 +16,11 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="flex flex-col flex-grow gap-16 px-10 py-16">
-      <ScrollingBanner bannerStyle={"h-12 flex bg-teal-300"}>
+    <div className="relative flex flex-col flex-grow gap-16 px-10 py-16">
+      <ScrollingBanner
+        containerStyle={"h-[500px] w-1/3"}
+        bannerStyle={"h-12 flex bg-teal-300"}
+      >
         {skills.map((skill, index) => (
           <Skill key={index} title={skill.title} level={skill.level}></Skill>
         ))}
