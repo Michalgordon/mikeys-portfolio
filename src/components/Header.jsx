@@ -10,7 +10,7 @@ const Header = () => {
   ];
 
   return (
-    <ul className="w-full flex items-center px-10  min-h-[96px] border-b-2 border-teal shadow-xl">
+    <ul className="w-full flex items-center px-10  min-h-[80px] border-b-2 border-teal shadow-xl">
       <Link className="mr-auto" to="/">
         <Icon
           className="w-8 h-8 hover:[filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]"
