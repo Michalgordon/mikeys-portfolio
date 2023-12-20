@@ -1,10 +1,25 @@
-import { Icon } from "../components";
+import { Icon, Skill } from "../components";
 import PropTypes from "prop-types";
 
-const ProjectCard = ({ title, info, links, imgSrc }) => {
+const ProjectCard = ({ title, info, links, skills, imgSrc }) => {
   return (
-    <div className="flex flex-col w-80 border-teal border-2 rounded-md p-4 pb-2 justify-center items-center gap-4 bg-white shadow-md ">
-      <h1 className=" text-xl uppercase font-thin ">- {title} -</h1>
+    <div className="relative flex flex-col w-80 border-teal border-2 rounded-md p-4 pb-2 justify-center items-center gap-4 bg-white shadow-md ">
+      <div className="flex flex-col gap-1">
+        <h1 className=" text-xl uppercase font-thin text-center">
+          - {title} -
+        </h1>
+        <ul className="flex gap-1 justify-center">
+          {skills?.map((skill, index) => (
+            <Skill
+              key={index}
+              title={skill.title}
+              iconName={skill.iconName}
+              size="small"
+            ></Skill>
+          ))}
+        </ul>
+      </div>
+
       <div
         style={{ "--image-url": `url(${imgSrc})` }}
         className={`w-[316px] -mx-4 h-20 bg-[image:var(--image-url)] bg-cover border-y-2 border-teal `}
@@ -39,5 +54,6 @@ ProjectCard.propTypes = {
   info: PropTypes.string,
   links: PropTypes.array,
   imgSrc: PropTypes.string,
+  skills: PropTypes.array,
 };
 export default ProjectCard;

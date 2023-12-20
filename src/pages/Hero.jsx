@@ -15,6 +15,7 @@ const Hero = () => {
               <Icon className="w-10" name="css3-alt"></Icon>
               <Icon className="w-10" name="html5"></Icon>
               <Icon className="w-10" name="node-js"></Icon>
+              <Icon className="w-10" name="js"></Icon>
             </div>
           </div>
         </div>
