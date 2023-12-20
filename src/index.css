@@ -43,34 +43,29 @@ button, button[type="submit"] {
   @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
 }
 .timeline{
-  --timeline-width: 8px;
+  --timeline-width: 4px;
+  --timeline-padding-top: 64px;
   --content-padding-y: 10px;
   --content-padding-x: 40px;
   --arrow-top-correction: 28px;
   --circle-w: 40px;
   --icon-w: 28px;
   --circle-border: 4px;
-  --circle-right-correction: calc((var(--circle-w)/2) ) ;
+  --circle-right-correction: calc(((var(--circle-w) + var(--circle-border))/2) ) ;
+  --circle-left-correction: calc(((var(--circle-w) - var(--circle-border))/2) ) ;
   --right-correction: calc(var(--timeline-width) + var(--circle-border));
   --circle-top-correction: calc(var(--arrow-top-correction));
   --icon-top-correction: calc(var(--arrow-top-correction) + ((var(--circle-w) - var(--icon-w))/2));
   --icon-right-correction: calc(var(--circle-right-correction) - ((var(--circle-w) - var(--icon-w))/2));
-  @apply relative flex flex-col w-full justify-center pt-16
+  @apply relative flex flex-col w-full justify-center pt-[var(--timeline-padding-top)]
 }
 .timeline::after {
   --angle: 0deg;
   border: var(--timeline-width) solid transparent;
   border-bottom: none ;
   border-left: none;
-  border-image-slice: 1;
-  /* border-image: linear-gradient(var(--angle),#97A79C, gray) 1; */
-  background: linear-gradient(var(--angle), rgba(151, 167, 156, 0.5), #97A79C) border-box; 
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) padding-box, 
-     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; 
-          mask-composite: exclude; 
-  @apply  content-[''] absolute w-1/2 rounded-tr-[7rem] top-0 bottom-0 right-1/2 -mr-1 animate-gradient 
+
+  @apply  content-[''] absolute w-1/3 rounded-tr-[7rem] -top-0 bottom-0 right-1/2 -mr-1 border-teal
 }
 @property --angle {
   syntax: '<angle>';
@@ -111,7 +106,9 @@ button, button[type="submit"] {
 /* Fix the circle for containers on the right side */
 .timeline-container--right::after {
   @apply -left-[var(--circle-right-correction)]
-  
+}
+.timeline-container--left:after{
+  @apply 
 }
 /* Add arrows to the left container (pointing right) */
 .border-arrow{
@@ -119,7 +116,7 @@ button, button[type="submit"] {
 
 }
 .border-arrow--left::before {
-  @apply border-arrow border-b-0 border-l-0 -right-[var(--right-correction)];
+  @apply border-arrow border-b-0 border-l-0 -right-[12px];
    
 }
 /* Add arrows to the right container (pointing left) */

@@ -71,7 +71,7 @@ const MyExperience = () => {
 
       <div className="timeline">
         {experience.map((experienceItem, index) => (
-          <div key={index} className="flex py-4">
+          <div key={index} className="flex py-2">
             <div
               className={`timeline-container ${
                 (index + 1) % 2 == 0
