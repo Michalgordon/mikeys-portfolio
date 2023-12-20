@@ -1,8 +1,6 @@
 import { ExperienceCard, Icon } from "../components";
 const MyExperience = () => {
-  //TODO change computer icon to van
   //TODO change paradox icon to enzo
-  //TODO change volunteering icon (wix?)
   //TODO find correct images
   //TODO edit all copy
   //add last timeline element
@@ -66,7 +64,7 @@ const MyExperience = () => {
     return (index + 1) % 2 == 0 ? "right" : "right";
   };
   return (
-    <div className="flex flex-col gap-5 px-10 py-16 overflow-auto">
+    <div className="flex flex-col flex-grow gap-5 px-10 py-16 overflow-auto">
       <div className="flex pl-10 justify-start">
         <h1 className="text-5xl font-thin">What I've been up to</h1>
       </div>
@@ -74,32 +72,6 @@ const MyExperience = () => {
       <div className="timeline">
         {experience.map((experienceItem, index) => (
           <div key={index} className="flex py-4">
-            <div
-              className={`timeline-pictures ${
-                (index + 1) % 2 == 0
-                  ? "timeline-pictures--right"
-                  : "timeline-pictures--left"
-              }`}
-            >
-              <div className="flex flex-col w-[15%] h-fit -rotate-12 shadow-md border-2 border-gray-300 bg-white p-2 pb-0">
-                <img
-                  className="max-w-full h-auto"
-                  src="public/vanlife-2.jpg"
-                ></img>
-                <div className="flex h-9 justify-center items-center">
-                  <h1 className="text-xs font-kalam">#vanlife </h1>
-                </div>
-              </div>
-              <div className="flex flex-col w-[15%] h-fit rotate-12 shadow-md border-2 border-gray-300 bg-white p-2 pb-0">
-                <img
-                  className="max-w-full h-auto"
-                  src="public/tetons.jpg"
-                ></img>
-                <div className="flex h-9 justify-center items-center">
-                  <h1 className="text-xs font-kalam">#hiking </h1>
-                </div>
-              </div>
-            </div>
             <div
               className={`timeline-container ${
                 (index + 1) % 2 == 0

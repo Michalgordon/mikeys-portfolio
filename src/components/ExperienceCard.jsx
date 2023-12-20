@@ -22,7 +22,7 @@ const ExperienceCard = ({
         </div>
       </div>
       <div>
-        <div className=" text-base whitespace-normal">{info}</div>
+        {/* <div className=" text-base whitespace-normal">{info}</div> */}
       </div>
     </div>
   );

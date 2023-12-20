@@ -81,7 +81,7 @@ button, button[type="submit"] {
 
 /* Container around content */
 .timeline-container {
-  @apply relative basis-1/2 flex flex-grow py-[var(--content-padding-y)] px-[var(--content-padding-x)]
+  @apply relative w-1/2 flex py-[var(--content-padding-y)] px-[var(--content-padding-x)]
 }
 
 /* The circles on the timeline */
@@ -101,12 +101,12 @@ button, button[type="submit"] {
 
 }
 .timeline-container--left {
-  @apply right-1/2
+  @apply justify-end
 }
 
 /* Place the container to the right */
 .timeline-container--right {
-  @apply left-0
+  @apply left-1/2
 }
 /* Fix the circle for containers on the right side */
 .timeline-container--right::after {
