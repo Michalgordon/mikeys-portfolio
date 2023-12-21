@@ -16,7 +16,7 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   fill: PropTypes.string,
   className: PropTypes.string,
 };
