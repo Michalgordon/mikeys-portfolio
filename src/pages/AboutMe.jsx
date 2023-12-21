@@ -15,7 +15,7 @@ const AboutMe = () => {
         className="pl-10 text-5xl 
        font-thin"
       >
-        About me
+        About Me
       </h1>
       {/* <div className="grid grid-cols-2 h-full	">
         <div className="bg-red row-auto">
