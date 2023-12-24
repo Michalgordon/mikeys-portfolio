@@ -23,8 +23,9 @@ const Hero = () => {
       <div className="relative flex justify-center flex-col">
         <div>
           <img
-            className="z-40 relative self-end w-[400px] rounded-[70%]"
-            src="./mikey-animated-profile.png"
+            className="z-40 -rotate-20 relative self-end w-[400px] aspect-square object-scale-down object-center
+            rounded-[70%] border-teal border-2 p-1"
+            src="./mikey-profile.png"
           ></img>
         </div>
       </div>
