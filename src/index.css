@@ -44,55 +44,46 @@ button, button[type="submit"] {
 }
 .timeline{
   --timeline-width: 2px;
-  --timeline-padding-top: 64px;
-  --content-padding-y: 10px;
-  --content-padding-x: 40px;
+  --content-padding-x: 48px;
   --arrow-top-correction: 28px;
   --circle-w: 40px;
   --icon-w: 28px;
   --circle-border: 2px;
   --circle-right-correction: calc(((var(--circle-w) + var(--circle-border))/2) ) ;
-  --circle-left-correction: calc(((var(--circle-w) - var(--circle-border))/2) ) ;
   --right-correction: calc(var(--timeline-width) + var(--circle-border));
-  --circle-top-correction: calc(var(--arrow-top-correction));
-  --icon-top-correction: calc(var(--arrow-top-correction) + ((var(--circle-w) - var(--icon-w))/2));
-  --icon-right-correction: calc(var(--circle-right-correction) - ((var(--circle-w) - var(--icon-w))/2));
-  @apply relative flex flex-col w-full justify-center pt-[var(--timeline-padding-top)]
+  --circle-top-correction: calc(var(--arrow-top-correction) + (var(--circle-w)/2));
+  @apply relative flex flex-col w-full justify-center gap-6
 }
 .timeline::after {
-  --angle: 0deg;
   border: var(--timeline-width) solid transparent;
   border-bottom: none ;
   border-left: none;
-border-top: none;
-  @apply  content-[''] absolute w-1/2  -top-0 bottom-0 right-1/2 -mr-1 border-teal
+  border-top: none;
+  @apply  content-[''] absolute w-1/2 -mr-[1px] -top-0 bottom-0 right-1/2 border-teal
 }
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
 
 /* Container around content */
 .timeline-container {
-  @apply relative w-1/2 flex py-[var(--content-padding-y)] px-[var(--content-padding-x)]
+  @apply relative w-1/2 flex px-[var(--content-padding-x)]
+}
+.timeline-container-blurb{
+  transform: translate(50%);
+  left: 0;
+  @apply relative w-1/2 flex px-[var(--content-padding-x)] bg-white z-20 shadow-lg
 }
 
-/* The circles on the timeline */
-.timeline-container::after {
-  border-width: var(--circle-border);
-  @apply content-['']	absolute rounded-full z-10 w-[var(--circle-w)] -right-[var(--circle-right-correction)] top-[var(--circle-top-correction)] aspect-square bg-white border-teal 
-}
 .timeline-icon{
-  @apply absolute z-20 top-[var(--icon-top-correction)] 
+  /* top: var(--arrow-top-correction); */
+  @apply absolute z-20 shadow-lg
 
 }
 .timeline-icon--right{
-    @apply -left-[var(--icon-right-correction)] 
+  transform: translate(-50%);
+  left: 0;
 }
 .timeline-icon--left{
-  @apply -right-[var(--icon-right-correction)] 
+  transform: translate(50%);
+  right: 0;
 
 }
 .timeline-container--left {
@@ -105,35 +96,34 @@ border-top: none;
 }
 /* Fix the circle for containers on the right side */
 .timeline-container--right::after {
-  @apply -left-[var(--circle-right-correction)]
+  transform: translateX(-50%);
+  left: 0;
 }
+
 .timeline-container--left:after{
-  @apply -right-[var(--circle-left-correction)]
+  transform: translateX(50%);
+  right: 0;
 }
 /* Add arrows to the left container (pointing right) */
 .border-arrow{
-  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal  rotate-45 bg-white top-[var(--arrow-top-correction)];
+  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal rotate-45 bg-white ;
 
 }
 .border-arrow--left::before {
-  @apply border-arrow border-b-0 border-l-0 -right-[12px];
+  @apply border-arrow border-b-0 border-l-0 -right-[12px] top-[var(--arrow-top-correction)];
    
 }
 /* Add arrows to the right container (pointing left) */
 .border-arrow--right::before {
   left: -12px;
-  @apply border-arrow border-t-0 border-r-0;
-
+  @apply border-arrow border-t-0 border-r-0 top-[var(--arrow-top-correction)];
 }
-.timeline-pictures{
-  @apply relative flex basis-1/2 py-[var(--content-padding-y)] px-[var(--content-padding-x)]
-}
-.timeline-pictures--right{
-  @apply left-1/2
-   
-}
-.timeline-pictures--left{
-@apply justify-end
+.border-arrow--bottom::before {
+  left: 50%;
+  bottom: -7px;
+  transform-origin: 0 0;
+  transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);
+  @apply border-arrow border-t-0 border-l-0;
 }
 }
 
