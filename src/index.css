@@ -42,6 +42,13 @@ input , textarea {
 button, button[type="submit"] {
   @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
 }
+.active {
+  @apply [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]
+}
+.active-icon{
+  @apply [filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]
+}
+
 .timeline{
   --timeline-width: 2px;
   --content-padding-x: 48px;
@@ -126,6 +133,4 @@ button, button[type="submit"] {
   @apply border-arrow border-t-0 border-l-0;
 }
 }
-
-
 

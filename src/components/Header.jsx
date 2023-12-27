@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Icon from "./Icon";
 const Header = () => {
@@ -9,23 +9,29 @@ const Header = () => {
   ];
 
   return (
-    <ul className="w-full flex items-center px-10  min-h-[80px] border-b-2 border-teal shadow-xl">
-      <Link className="mr-auto" to="/">
+    <nav className="w-full flex items-center px-10  min-h-[80px] border-b-2 border-teal shadow-xl">
+      <NavLink
+        className={`group mr-auto ${({ isActive }) =>
+          isActive ? "active" : ""}`}
+        to=""
+      >
         <Icon
-          className="w-8 h-8 hover:[filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]"
+          className={`w-8 h-8 hover:[filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))] group-active:bg-black`}
           name="home-solid"
         ></Icon>
-      </Link>
+      </NavLink>
       {pages.map((page, index) => (
-        <Link
+        <NavLink
           key={index}
-          className="uppercase font-medium text-base border-r-2 border-teal px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
+          className={`uppercase font-medium text-base border-r-2 border-teal px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none ${({
+            isActive,
+          }) => (isActive ? "active" : "")}`}
           to={page.path}
         >
           {page.title}
-        </Link>
+        </NavLink>
       ))}
-    </ul>
+    </nav>
   );
 };
 

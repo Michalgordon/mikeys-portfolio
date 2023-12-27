@@ -1,11 +1,4 @@
-import {
-  Hero,
-  AboutMe,
-  MyExperience,
-  MyProjects,
-  ContactMe,
-  ErrorPage,
-} from "./pages";
+import { Hero, AboutMe, MyProjects, ContactMe, ErrorPage } from "./pages";
 import App from "./App";
 import { createBrowserRouter } from "react-router-dom";
 
