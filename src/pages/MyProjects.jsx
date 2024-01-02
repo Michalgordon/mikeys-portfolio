@@ -79,10 +79,7 @@ const PROJECTS = [
 ];
 const MyProjects = () => {
   return (
-    <div className="flex flex-col flex-grow gap-16 px-10 py-16">
-      <div className="flex pl-10 justify-start">
-        <h1 className="text-5xl font-thin">My Projects</h1>
-      </div>
+    <div className="flex flex-col flex-grow justify-center gap-16 px-10 py-16">
       <div className="flex justify-center gap-8">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={index} {...project}></ProjectCard>
