@@ -11,7 +11,7 @@ const AboutMe = () => {
     <div className=" w-full flex flex-col flex-grow px-20">
       <div
         ref={ref}
-        className={`relative flex flex-col justify-center box-content  min-h-full `}
+        className={`relative flex flex-col justify-center box-content min-h-full `}
       >
         <motion.h2
           className="flex justify-end text-5xl font-semibold h-0"
