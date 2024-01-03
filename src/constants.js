@@ -75,3 +75,81 @@ export const SKILLS = [
     `My experience in a small startup made me a fast and independent learner. I gained a lot of experience with Vue.js, JavaScript, CSS and HTML. Since moving to the States, I've turned my attention to new frameworks, like React, that will make me a stronger and more well-rounded developer.` , 
     `Learning on my own and living on the road has been awesome but I'm ready for the next step in my career and look forward to working on cool products and being part of a team again!`, 
   ]}
+  export const PROJECTS = [
+    {
+      title: "Personal Portfolio",
+      imgSrc: "public/personal-website.png",
+      links: [
+        {
+          title: "Github",
+          iconName: "github",
+          href: "https://github.com/Michalgordon/mikeys-portfolio",
+          download: false,
+        },
+      ],
+      skills: [
+        { iconName: "react" },
+        { iconName: "js-square" },
+        { iconName: "html5" },
+        { iconName: "css3-alt" },
+        { iconName: "tailwindcss" },
+      ],
+      info: "My personal website that I designed and implemented",
+    },
+    {
+      title: "botanica",
+      imgSrc: "public/botanica.png",
+      links: [
+        {
+          title: "GitHub",
+          iconName: "github",
+          href: "https://github.com/Michalgordon/Botanica",
+          download: false,
+        },
+        {
+          title: "Website",
+          iconName: "external-link-alt-solid",
+          href: "https://amazing-hotteok-99b058.netlify.app/",
+          download: false,
+        },
+        {
+          title: "Figma",
+          iconName: "figma",
+          href: "https://www.figma.com/file/aKhZMcWnrJaaVVJ7iCdm2D/Botanica---Confrence?type=design&mode=design&t=1cxyzr8mr8Z1fHlp-0",
+          download: false,
+        },
+      ],
+      skills: [
+        { iconName: "react" },
+        { iconName: "js-square" },
+        { iconName: "html5" },
+        { iconName: "css3-alt" },
+        { iconName: "tailwindcss" },
+      ],
+      info: "A responsive website I developed using a friend's design!",
+    },
+    {
+      title: "WhatsApp Extension",
+      imgSrc: "public/whatsapp-extension.png",
+      links: [
+        {
+          title: "Geektime",
+          iconName: "external-link-alt-solid",
+          href: "https://www.geektime.co.il/chrome-whatsapp-messages/?fbclid=IwAR01mMmlvUkjOMvnK0bSllA6PLHkm2dxmXuLoe3axdjPR-tBpmLqoLPOpKs",
+          download: false,
+        },
+        {
+          title: "Store",
+          iconName: "chrome",
+          href: "https://chromewebstore.google.com/detail/olivia-for-recruiters/ldcjdglgbpfldnfebjkejpppfiedkkec?hl=en-GB",
+          download: false,
+        },
+      ],
+      skills: [
+        { iconName: "js-square" },
+        { iconName: "extension-svgrepo-com" },
+        { iconName: "whatsapp" },
+      ],
+      info: "A chrome extension using WhatsApp API written about in Geektime magazine!",
+    },
+  ];

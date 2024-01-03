@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Icon } from "../components";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
   const form = useRef();
@@ -52,58 +53,66 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col flex-grow p-20">
-      <h2 className="flex justify-end text-5xl font-semibold "> Contact Me.</h2>
-
-      <h1 className="text-center text-4xl font-thin px-4">
-        I'm always excited to hear from new people and tackle new challenges!
-      </h1>
-
-      <form
-        ref={form}
-        className="flex flex-col gap-4 px-32 flex-grow"
-        onSubmit={sendEmail}
+    <div className="flex flex-col flex-grow justify-center px-20">
+      <motion.h2
+        className="flex justify-end text-5xl font-semibold h-0"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1, type: "spring", bounce: 0.5 }}
       >
-        <div className="flex gap-4">
-          <div className="flex flex-col gap-4 basis-1/3">
-            <input
-              type="text"
-              placeholder="Name"
-              name="from_name"
-              className="input"
-              maxLength="160"
-              required
-            ></input>
-            <input
-              type="text"
-              placeholder="Email"
-              name="reply_to"
-              className="input"
-              maxLength="160"
-              required
-            ></input>
-          </div>
-          <textarea
-            type="text"
-            placeholder="Message"
-            name="message"
-            rows="10"
-            className="flex-grow input min-h-[100%] resize-none tall:resize-y tall:max-h-[300px] overflow-auto"
-            required
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="group -left-1/3 overflow-hidden flex justify-self-end justify-center items-center gap- w-fit ml-auto hover:shadow-lg"
+        Contact Me.
+      </motion.h2>
+      <div className="flex flex-col justify-center items-center gap-12 pt-24">
+        <h1 className="text-center text-4xl font-thin w-1/2">
+          I'm always excited to hear from new people and tackle new challenges!
+        </h1>
+
+        <form
+          ref={form}
+          className="flex w-full flex-col gap-4 px-32"
+          onSubmit={sendEmail}
         >
-          {buttonStatus[currentEmailStatus].text}
-          <Icon
-            name={buttonStatus[currentEmailStatus].icon}
-            fill="white"
-            className="w-6 group-hover:animate-wiggle"
-          ></Icon>
-        </button>
-      </form>
+          <div className="flex gap-4">
+            <div className="flex flex-col gap-4 basis-1/3">
+              <input
+                type="text"
+                placeholder="Name"
+                name="from_name"
+                className="input"
+                maxLength="160"
+                required
+              ></input>
+              <input
+                type="text"
+                placeholder="Email"
+                name="reply_to"
+                className="input"
+                maxLength="160"
+                required
+              ></input>
+            </div>
+            <textarea
+              type="text"
+              placeholder="Message"
+              name="message"
+              rows="10"
+              className="flex-grow input min-h-[100%] resize-none tall:resize-y tall:max-h-[300px] overflow-auto"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="group -left-1/3 overflow-hidden flex justify-self-end justify-center items-center gap- w-fit ml-auto hover:shadow-lg"
+          >
+            {buttonStatus[currentEmailStatus].text}
+            <Icon
+              name={buttonStatus[currentEmailStatus].icon}
+              fill="white"
+              className="w-6 group-hover:animate-wiggle"
+            ></Icon>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

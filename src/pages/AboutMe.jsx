@@ -8,7 +8,7 @@ const AboutMe = () => {
   const isInView = useInView(ref, { amount: 1 });
 
   return (
-    <div className=" w-full flex flex-col flex-grow ">
+    <div className="w-full flex flex-col flex-grow ">
       <div
         ref={ref}
         className={`relative flex flex-col justify-center box-content px-20 min-h-full shadow-xl`}
@@ -31,7 +31,7 @@ const AboutMe = () => {
             <ProfilePicture></ProfilePicture>
           </motion.div>
           <motion.div
-            className="flex-col "
+            className="flex-col"
             initial={{ opacity: 0 }}
             animate={{ opacity: "100%" }}
             exit={{ opacity: 0, duration: 2 }}
@@ -45,7 +45,7 @@ const AboutMe = () => {
           </motion.div>
         </div>
         <motion.div
-          className="relative -bottom-10 self-center "
+          className="relative -bottom-10 self-center h-0 "
           initial={{ y: "200%" }}
           animate={{ y: 0 }}
           transition={{ duration: 1, type: "spring", bounce: 0.5 }}

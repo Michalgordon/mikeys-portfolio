@@ -45,9 +45,12 @@ button, button[type="submit"] {
 .active {
   @apply [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]
 }
-.active-icon{
-  @apply [filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]
+.active:not(.icon-link):after{
+  content: '.';
 }
+
+
+
 
 
 .timeline{
