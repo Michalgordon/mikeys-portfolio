@@ -8,14 +8,14 @@ const AboutMe = () => {
   const isInView = useInView(ref, { amount: 1 });
 
   return (
-    <div className=" w-full flex flex-col flex-grow px-20">
+    <div className=" w-full flex flex-col flex-grow ">
       <div
         ref={ref}
-        className={`relative flex flex-col justify-center box-content min-h-full `}
+        className={`relative flex flex-col justify-center box-content px-20 min-h-full shadow-xl`}
       >
         <motion.h2
           className="flex justify-end text-5xl font-semibold h-0"
-          initial={{ y: -200 }}
+          initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ duration: 1, type: "spring", bounce: 0.5 }}
         >
@@ -55,45 +55,67 @@ const AboutMe = () => {
           }}
         >
           <Icon
-            className="w-14"
+            className="w-14 animate-bounce"
             name="angle-double-down-solid"
             fill="#97A79C" //TODO
           ></Icon>
         </motion.div>
       </div>
-      <div className="timeline w-full">
-        {EXPERIENCE_LIST.map((experienceItem, index) => (
-          <div key={index} className="flex">
-            <div
-              className={`timeline-container ${
-                (index + 1) % 2 == 0
-                  ? "timeline-container--left"
-                  : "timeline-container--right"
-              }`}
-            >
-              <div
-                className={`timeline-icon w-fit border-2 border-teal rounded-full aspect-square bg-white p-1 top-[20px]
-${(index + 1) % 2 == 0 ? "timeline-icon--left" : "timeline-icon--right"}`}
-              >
-                <Icon
-                  className="w-[var(--icon-w)]"
-                  name={experienceItem.iconName}
-                  fill="#97A79C" //TODO
-                ></Icon>
-              </div>
+      {/* <div className="flex flex-grow flex-col  h-[60vh] min-h-[60vh] p-20 shadow-xl">
+        <h2 className="flex justify-end text-5xl font-semibold h-0">Skills.</h2>
+      </div>
+      <div className="flex flex-grow flex-col h-[60vh] min-h-[60vh] p-20 shadow-xl">
+        <h2 className="flex justify-end text-5xl font-semibold h-0">
+          Random Facts.
+        </h2>
+      </div> */}
 
-              <ExperienceCard
-                {...experienceItem}
-                className={`relative border-2 border-teal ${
+      <div className="flex flex-col gap-12 p-20">
+        <h2 className="flex justify-end text-5xl font-semibold">
+          My Experience.
+        </h2>
+        <div className="timeline">
+          <img
+            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square object-scale-down object-center rounded-full border-2 border-teal bg-white shadow-lg mb-20"
+            src="./mikey-profile.png"
+          ></img>
+
+          {EXPERIENCE_LIST.map((experienceItem, index) => (
+            <div key={index} className="flex">
+              <div
+                className={`timeline-container ${
                   (index + 1) % 2 == 0
-                    ? "border-arrow--left"
-                    : "border-arrow--right"
+                    ? "timeline-container--left"
+                    : "timeline-container--right"
                 }`}
-              ></ExperienceCard>
+              >
+                <div
+                  className={`timeline-icon w-fit border-2 border-teal rounded-full aspect-square bg-white p-1 top-[20px]
+${(index + 1) % 2 == 0 ? "timeline-icon--left" : "timeline-icon--right"}`}
+                >
+                  <Icon
+                    className="w-[var(--icon-w)]"
+                    name={experienceItem.iconName}
+                    fill="#97A79C" //TODO
+                  ></Icon>
+                </div>
+
+                <ExperienceCard
+                  {...experienceItem}
+                  className={`relative border-2 border-teal ${
+                    (index + 1) % 2 == 0
+                      ? "border-arrow--left"
+                      : "border-arrow--right"
+                  }`}
+                ></ExperienceCard>
+              </div>
             </div>
-          </div>
-        ))}
-        <div className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square rounded-full border-2 border-teal bg-white mt-20 "></div>
+          ))}
+          <img
+            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square rounded-full border-2 border-teal bg-white mt-20 shadow-lg"
+            src="./mikey-highschool.png"
+          ></img>
+        </div>
       </div>
     </div>
   );

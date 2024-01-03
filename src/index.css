@@ -71,11 +71,6 @@ button, button[type="submit"] {
 .timeline-container {
   @apply relative w-1/2 flex px-[var(--content-padding-x)]
 }
-.timeline-container-blurb{
-  transform: translate(25%);
-  left: 0;
-  @apply relative w-2/3 flex px-[var(--content-padding-x)] bg-white z-20 shadow-lg
-}
 
 .timeline-icon{
   /* top: var(--arrow-top-correction); */
