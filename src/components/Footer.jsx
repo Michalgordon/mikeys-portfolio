@@ -42,10 +42,10 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <div className="h-0 flex text-xs items-center ml-auto pr-3">
+      <div className="h-0 flex text-[10px] items-center ml-auto pr-3 gap-[2px]">
         <p> Michal Gordon </p>
         <Icon name="copyright" className={"w-4"}></Icon> <p> 2023</p>
-      </div>{" "}
+      </div>
     </div>
   );
 };

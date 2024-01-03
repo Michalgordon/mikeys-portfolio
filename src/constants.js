@@ -73,5 +73,5 @@ export const SKILLS = [
     content: [
     `I'm a nomadic full stack developer with over 3 years of experience. I used to work for a successful startup in Tel Aviv but quit my job in 2022 to try out a different lifestyle in the States. My partner and I live in a van and we're slowly making our way around the country, trying to climb as many rocks as we can.`,
     `My experience in a small startup made me a fast and independent learner. I gained a lot of experience with Vue.js, JavaScript, CSS and HTML. Since moving to the States, I've turned my attention to new frameworks, like React, that will make me a stronger and more well-rounded developer.` , 
-    `Learning on my own and living on the road has been awesome but I'm ready for the step in my career and look forward to working on cool products and being part of a team again!`, 
+    `Learning on my own and living on the road has been awesome but I'm ready for the next step in my career and look forward to working on cool products and being part of a team again!`, 
   ]}

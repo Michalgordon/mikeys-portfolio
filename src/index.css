@@ -49,6 +49,7 @@ button, button[type="submit"] {
   @apply [filter:drop-shadow(3px_5px_2px_rgb(0_0_0_/_0.2))]
 }
 
+
 .timeline{
   --timeline-width: 2px;
   --content-padding-x: 48px;
@@ -72,11 +73,6 @@ button, button[type="submit"] {
 /* Container around content */
 .timeline-container {
   @apply relative w-1/2 flex px-[var(--content-padding-x)]
-}
-.timeline-container-blurb{
-  transform: translate(50%);
-  left: 0;
-  @apply relative w-1/2 flex px-[var(--content-padding-x)] bg-white z-20 shadow-lg
 }
 
 .timeline-icon{
