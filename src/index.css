@@ -42,6 +42,11 @@ input , textarea {
 button, button[type="submit"] {
   @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
 }
+.header{
+  position: absolute;
+  top: 100px;
+  right: -50px;
+}
 .timeline{
   --timeline-width: 2px;
   --content-padding-x: 48px;

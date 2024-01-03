@@ -52,10 +52,11 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col flex-grow gap-20 pt-20">
-      <h1 className="text-center text-5xl font-thin">
-        I'm always excited to hear from new people <br></br> and tackle new
-        challenges!
+    <div className="flex flex-col flex-grow p-20">
+      <h2 className="flex justify-end text-5xl font-semibold "> Contact Me.</h2>
+
+      <h1 className="text-center text-4xl font-thin px-4">
+        I'm always excited to hear from new people and tackle new challenges!
       </h1>
 
       <form
