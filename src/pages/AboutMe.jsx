@@ -25,7 +25,6 @@ const AboutMe = () => {
           <motion.div
             initial={{ x: "200%" }}
             animate={{ x: "0" }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 0.7, type: "spring" }}
           >
             <ProfilePicture></ProfilePicture>
