@@ -13,11 +13,16 @@ const MyProjects = () => {
       >
         My Projects.
       </motion.h2>
-      <div className="flex justify-center gap-8 pt-24">
+      <motion.div
+        className="flex justify-center gap-8 pt-24"
+        initial={{ y: "200%" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.7, type: "spring" }}
+      >
         {PROJECTS.map((project, index) => (
           <ProjectCard key={index} {...project}></ProjectCard>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

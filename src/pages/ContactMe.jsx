@@ -63,14 +63,22 @@ const ContactMe = () => {
         Contact Me.
       </motion.h2>
       <div className="flex flex-col justify-center items-center gap-12 pt-24">
-        <h1 className="text-center text-4xl font-thin w-1/2">
+        <motion.h1
+          className="text-center text-4xl font-thin w-1/2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: "100%" }}
+          transition={{ delay: 0.2, ease: "easeOut", duration: 1 }}
+        >
           I'm always excited to hear from new people and tackle new challenges!
-        </h1>
+        </motion.h1>
 
-        <form
+        <motion.form
           ref={form}
           className="flex w-full flex-col gap-4 px-32"
           onSubmit={sendEmail}
+          initial={{ x: "-200%" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7, type: "spring" }}
         >
           <div className="flex gap-4">
             <div className="flex flex-col gap-4 basis-1/3">
@@ -111,7 +119,7 @@ const ContactMe = () => {
               className="w-6 group-hover:animate-wiggle"
             ></Icon>
           </button>
-        </form>
+        </motion.form>
       </div>
     </div>
   );
