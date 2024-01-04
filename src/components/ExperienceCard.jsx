@@ -15,10 +15,10 @@ const ExperienceCard = ({
     >
       <div className="relative overflow-hidden capitalize flex flex-col ">
         <div className="">
-          <div className="text-xs">{timeLine}</div>
+          <h3 className="text-xs">{timeLine}</h3>
           <h1 className="text-xl uppercase font-thin">{title}</h1>
-          <div className="text-sm font-semibold">{company}</div>
-          <div className="text-xs">{location}</div>
+          <h2 className="text-sm font-semibold">{company}</h2>
+          <h3 className="text-xs">{location}</h3>
         </div>
       </div>
       <div>

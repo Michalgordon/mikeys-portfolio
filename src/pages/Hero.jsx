@@ -14,12 +14,12 @@ const Hero = () => {
         <div className="flex flex-col gap-3">
           <h1 className="text-6xl font-thin">Hi, I'm Mikey!</h1>
           <div className="flex flex-col w-fit pl-20 gap-20">
-            <div className="text-4xl font-semibold ">
+            <h2 className="text-4xl font-semibold ">
               A <span className="italic ">Nomadic</span>{" "}
               <span className="text-5xl font-semibold">
                 Frontend Developer.{" "}
               </span>
-            </div>
+            </h2>
             <div className="flex gap-5 self-center">
               <Icon className="w-10" name="vuejs"></Icon>
               <Icon className="w-10" name="react"></Icon>

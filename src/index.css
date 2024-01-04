@@ -37,10 +37,16 @@ input::-webkit-inner-spin-button {
 
 @layer components {
 input , textarea {
-  @apply border-teal p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
+  @apply border-russian-blue p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
 }
 button, button[type="submit"] {
-  @apply h-10 border-teal p-2 text-base border-2 rounded-md text-white bg-teal box-border uppercase
+  @apply h-10 border-russian-blue p-2 text-base border-2 rounded-md text-white bg-russian-blue box-border uppercase
+}
+h1, h2, h3{
+  @apply text-sea-kelp
+}
+p, a{
+  @apply text-sea-kelp
 }
 .active {
   @apply [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]
@@ -70,7 +76,7 @@ button, button[type="submit"] {
   border-bottom: none ;
   border-left: none;
   border-top: none;
-  @apply  content-[''] absolute w-1/2 -mr-[1px] -top-0 bottom-0 right-1/2 border-teal
+  @apply  content-[''] absolute w-1/2 -mr-[1px] -top-0 bottom-0 right-1/2 border-russian-blue
 }
 
 /* Container around content */
@@ -112,7 +118,7 @@ button, button[type="submit"] {
 }
 /* Add arrows to the left container (pointing right) */
 .border-arrow{
-  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-teal rotate-45 bg-white ;
+  @apply content-[''] absolute z-10  w-5 aspect-square border-2 border-russian-blue rotate-45 bg-white ;
 
 }
 .border-arrow--left::before {

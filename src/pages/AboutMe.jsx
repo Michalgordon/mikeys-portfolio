@@ -57,7 +57,7 @@ const AboutMe = () => {
           <Icon
             className="w-14 animate-bounce"
             name="angle-double-down-solid"
-            fill="#97A79C" //TODO
+            fill="#9AAEBB" //TODO
           ></Icon>
         </motion.div>
       </div>
@@ -76,7 +76,7 @@ const AboutMe = () => {
         </h2>
         <div className="timeline">
           <img
-            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square object-scale-down object-center rounded-full border-2 border-teal bg-white shadow-lg mb-20"
+            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square object-scale-down object-center rounded-full border-2 border-russian-blue bg-russian-blue shadow-lg mb-20"
             src="./mikey-profile.png"
           ></img>
 
@@ -90,19 +90,19 @@ const AboutMe = () => {
                 }`}
               >
                 <div
-                  className={`timeline-icon w-fit border-2 border-teal rounded-full aspect-square bg-white p-1 top-[20px]
+                  className={`timeline-icon w-fit border-2 border-russian-blue rounded-full aspect-square bg-white p-1 top-[20px]
 ${(index + 1) % 2 == 0 ? "timeline-icon--left" : "timeline-icon--right"}`}
                 >
                   <Icon
                     className="w-[var(--icon-w)]"
                     name={experienceItem.iconName}
-                    fill="#97A79C" //TODO
+                    fill="#9AAEBB" //TODO
                   ></Icon>
                 </div>
 
                 <ExperienceCard
                   {...experienceItem}
-                  className={`relative border-2 border-teal ${
+                  className={`relative border-2 border-russian-blue ${
                     (index + 1) % 2 == 0
                       ? "border-arrow--left"
                       : "border-arrow--right"
@@ -112,7 +112,7 @@ ${(index + 1) % 2 == 0 ? "timeline-icon--left" : "timeline-icon--right"}`}
             </div>
           ))}
           <img
-            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square rounded-full border-2 border-teal bg-white mt-20 shadow-lg"
+            className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square rounded-full border-2 border-russian-blue bg-russian-blue mt-20 shadow-lg"
             src="./mikey-highschool.png"
           ></img>
         </div>

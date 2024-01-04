@@ -9,7 +9,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="w-full flex items-center px-10  min-h-[80px] border-b-2 border-teal shadow-xl">
+    <nav className="w-full flex items-center px-10  min-h-[80px] border-b-2 border-russian-blue shadow-xl">
       <NavLink
         className={` mr-auto uppercase font-medium text-base  px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]`}
         to=""
@@ -23,7 +23,7 @@ const Header = () => {
       {pages.map((page, index) => (
         <NavLink
           key={index}
-          className={`uppercase font-medium text-base border-r-2 border-teal px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none ${({
+          className={`uppercase font-medium text-base border-r-2 border-russian-blue px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none ${({
             isActive,
           }) => (isActive ? "active" : "")}`}
           to={page.path}

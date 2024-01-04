@@ -6,15 +6,10 @@ export default {
   theme: {
     extend: {
       colors:{
-        beige :"#DDD0C8",
-        cream: "#DED9D5",
-        chocolate: "#884D4D",
-        teal:"#97A79C",
-        "teal-300": "rgba(151, 167, 156, 0.3)",
-        darkGray: "#4B4B49",
-        aqua: "#AEB9AC",
-        red: "#874E52"
-
+        "pewter-blue": "#8BA7B8",
+        "russian-blue": "#9AAEBB",
+        "sea-kelp": "#364954"
+      
       },
       fontFamily: {
         poppins: ["Poppins"],

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ProjectCard = ({ title, info, links, skills, imgSrc }) => {
   return (
-    <div className="relative flex flex-col w-80 border-teal border-2 rounded-md p-4 pb-2 justify-center items-center gap-4 bg-white shadow-md ">
+    <div className="relative flex flex-col w-80 border-russian-blue border-2 rounded-md p-4 pb-2 justify-center items-center gap-4 bg-white shadow-md ">
       <div className="flex flex-col gap-1">
         <h1 className=" text-xl uppercase font-thin text-center">
           - {title} -
@@ -22,7 +22,7 @@ const ProjectCard = ({ title, info, links, skills, imgSrc }) => {
 
       <div
         style={{ "--image-url": `url(${imgSrc})` }}
-        className={`w-[316px] -mx-4 h-20 bg-[image:var(--image-url)] bg-cover border-y-2 border-teal `}
+        className={`w-[316px] -mx-4 h-20 bg-[image:var(--image-url)] bg-cover border-y-2 border-russian-blue `}
       ></div>
       <p className="flex text-center text-sm font-thin px-2 h-16 items-center">
         {info}
@@ -35,7 +35,7 @@ const ProjectCard = ({ title, info, links, skills, imgSrc }) => {
             target="_blank"
             rel="noopener noreferrer"
             download={footerItem.download}
-            className="group flex flex-col justify-center items-center uppercase text-xs border-r-2 border-teal cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
+            className="group flex flex-col justify-center items-center uppercase text-xs border-r-2 border-russian-blue cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
           >
             <Icon
               name={footerItem.iconName}

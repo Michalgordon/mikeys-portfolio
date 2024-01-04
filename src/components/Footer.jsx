@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center min-h-[80px] border-t-2 border-teal shadow-[25px_0_50px_-12px_rgba(0,0,0,0.3)]">
+    <div className="w-full flex flex-col justify-center items-center min-h-[80px] border-t-2 border-russian-blue shadow-[25px_0_50px_-12px_rgba(0,0,0,0.3)]">
       <div className="flex">
         {links.map((footerItem, index) => (
           <a
@@ -32,7 +32,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             download={footerItem.download}
-            className="group flex flex-col justify-center items-center uppercase text-xs border-r-2 border-teal cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
+            className="group flex flex-col justify-center items-center uppercase text-xs border-r-2 border-russian-blue cursor-pointer px-6 hover:[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] last:border-none"
           >
             <Icon
               name={footerItem.iconName}

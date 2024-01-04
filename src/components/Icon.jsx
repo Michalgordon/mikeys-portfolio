@@ -2,14 +2,14 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import PropTypes from "prop-types";
 
-const Icon = (props) => {
+const Icon = ({ name, className, fill = "#364954" }) => {
   return (
     <ReactSVG
-      src={`src/assets/icons/${props.name}.svg`}
-      className={`${props.className}`}
+      src={`src/assets/icons/${name}.svg`}
+      className={`${className}`}
       style={{
-        fill: props.fill,
-        className: props.className,
+        fill: fill,
+        className: className,
       }}
     />
   );
