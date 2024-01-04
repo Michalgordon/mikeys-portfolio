@@ -34,7 +34,6 @@ const AboutMe = () => {
             className="flex-col"
             initial={{ opacity: 0 }}
             animate={{ opacity: "100%" }}
-            exit={{ opacity: 0, duration: 2 }}
             transition={{ delay: 0.2, ease: "easeOut", duration: 1 }}
           >
             {EXPERIENCE_BLURB.content.map((paragraph, index) => (
