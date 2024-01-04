@@ -10,7 +10,6 @@ const Hero = () => {
             className="text-6xl font-thin"
             initial={{ opacity: 0 }}
             animate={{ opacity: "100%" }}
-            exit={{ opacity: 0, duration: 1 }}
             transition={{ delay: 0.2, ease: "easeOut", duration: 1 }}
           >
             Hi, I'm Mikey!
@@ -31,7 +30,6 @@ const Hero = () => {
               className="flex gap-5 self-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: "100%" }}
-              exit={{ opacity: 0, duration: 1 }}
               transition={{ delay: 0.2, ease: "easeOut", duration: 1 }}
             >
               <Icon className="w-10" name="vuejs"></Icon>
@@ -48,7 +46,6 @@ const Hero = () => {
         className="flex flex-col justify-center"
         initial={{ x: "200%" }}
         animate={{ x: "0" }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 0.7, type: "spring" }}
       >
         <ProfilePicture></ProfilePicture>
