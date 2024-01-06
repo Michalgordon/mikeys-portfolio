@@ -17,7 +17,7 @@ const Footer = () => {
     {
       title: "Resume",
       iconName: "file-download-solid",
-      href: "public/Resume - Michal Gordon.pdf",
+      href: "/Resume - Michal Gordon.pdf",
       download: true,
     },
   ];

@@ -18,7 +18,7 @@ export const SKILLS = [
     //   company: "#vanlife",
     //   title: "doing my own thing",
     //   info: "working on my portfolio, learning react and looking for a job!",
-    //   imgSrc: "public/vanlife-2.jpg",
+    //   imgSrc: "/vanlife-2.jpg",
     //   iconName: "shuttle-van-solid",
     // },
     {
@@ -27,7 +27,7 @@ export const SKILLS = [
       company: "Spetz / Paradox",
       title: "Full Stack developer",
       info: "I started as employee number 7 at Spetz, a small start up in tel aviv. A year later, we were acquired by Paradox! ",
-      imgSrc: "public/paradox.jpeg",
+      imgSrc: "paradox.jpeg",
       iconName: "laptop-code-solid",
     },
     {
@@ -78,7 +78,7 @@ export const SKILLS = [
   export const PROJECTS = [
     {
       title: "Personal Portfolio",
-      imgSrc: "public/personal-website.png",
+      imgSrc: "/personal-website.png",
       links: [
         {
           title: "Github",
@@ -98,7 +98,7 @@ export const SKILLS = [
     },
     {
       title: "botanica",
-      imgSrc: "public/botanica.png",
+      imgSrc: "botanica.png",
       links: [
         {
           title: "GitHub",
@@ -130,7 +130,7 @@ export const SKILLS = [
     },
     {
       title: "WhatsApp Extension",
-      imgSrc: "public/whatsapp-extension.png",
+      imgSrc: "/whatsapp-extension.png",
       links: [
         {
           title: "Geektime",
