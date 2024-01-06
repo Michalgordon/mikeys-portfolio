@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="flex flex-grow justify-center px-20">
+    <div className="flex flex-grow justify-center px-20 overflow-hidden">
       <div className="flex flex-grow justify-center flex-col gap-24">
         <div className="flex flex-col gap-3">
           <motion.h1

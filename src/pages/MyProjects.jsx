@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MyProjects = () => {
   return (
-    <div className="flex flex-col justify-center flex-grow px-20">
+    <div className="flex flex-col justify-center flex-grow px-20 overflow-hidden">
       <motion.h2
         className="flex justify-end text-5xl font-semibold h-0"
         initial={{ y: -100 }}
