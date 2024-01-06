@@ -43,10 +43,10 @@ const AboutMe = () => {
           </motion.div>
         </div>
         <motion.div
-          className="relative -bottom-10 self-center h-0 "
-          initial={{ y: "200%" }}
+          className="relative -bottom-10 self-center h-0"
+          initial={{ y: 200 }}
           animate={{ y: 0 }}
-          transition={{ duration: 1, type: "spring", bounce: 0.5 }}
+          transition={{ duration: 1, bounce: 0.5 }}
           style={{
             opacity: isInView ? 1 : 0,
             transition: "opacity 0.5s",
