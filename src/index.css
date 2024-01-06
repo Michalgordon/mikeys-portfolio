@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@200;300;400;500;600;700;800;900&display=swap");
 
 
 @tailwind base;
@@ -49,10 +48,11 @@ p, a{
   @apply text-sea-kelp
 }
 .active {
-  @apply [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]
+  @apply [text-shadow:_1px_1px_0_rgb(154_174_187_/_50%)]
 }
-.active:not(.icon-link):after{
+.active:after{
   content: '.';
+  @apply w-0 inline-block
 }
 
 
