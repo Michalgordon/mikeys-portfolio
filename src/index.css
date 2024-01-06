@@ -44,8 +44,14 @@ button, button[type="submit"] {
 h1, h2, h3{
   @apply text-sea-kelp
 }
-p, a{
+p{
   @apply text-sea-kelp
+}
+a{
+  @apply  text-sea-kelp hover:[text-shadow:_0_1px_0_rgb(154_174_187/0.4)]
+}
+a > .icon {
+  @apply  hover:[filter:drop-shadow(3px_5px_2px_rgb(154_174_187/_0.4))]
 }
 .active {
   @apply [text-shadow:_1px_1px_0_rgb(154_174_187_/_50%)]

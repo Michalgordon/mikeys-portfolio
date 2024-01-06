@@ -6,7 +6,7 @@ const Icon = ({ name, className, fill = "#364954" }) => {
   return (
     <ReactSVG
       src={`src/assets/icons/${name}.svg`}
-      className={`${className}`}
+      className={`${"icon " + className}`}
       style={{
         fill: fill,
         className: className,
