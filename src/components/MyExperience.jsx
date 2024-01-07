@@ -1,13 +1,14 @@
 import { EXPERIENCE_LIST } from "../constants";
-import { ExperienceCard, Icon } from "./index";
+import { ExperienceCard, Icon, ProfilePicture } from "./index";
 
 const MyExperience = () => {
   return (
     <div className="timeline">
-      <img
-        className="relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 aspect-square object-scale-down object-center rounded-full border-2 border-russian-blue bg-russian-blue shadow-lg mb-20"
-        src="./mikey-profile.png"
-      ></img>
+      <ProfilePicture
+        className={
+          "relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-20 border-2 border-russian-blue bg-russian-blue mb-20"
+        }
+      ></ProfilePicture>
 
       {EXPERIENCE_LIST.map((experienceItem, index) => (
         <div key={index} className="flex">

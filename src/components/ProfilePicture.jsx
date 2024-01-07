@@ -1,11 +1,17 @@
-const ProfilePicture = () => {
+import PropTypes from "prop-types";
+
+const ProfilePicture = ({ className }) => {
   return (
     <img
-      className="min-w-[250px] w-[250px] md:min-w-[400px] md:w-[400px] z-40 -rotate-12 relative aspect-square object-scale-down object-center shadow-lg
-          rounded-[70%]  bg-russian-blue"
+      className={` ${className} rounded-full aspect-square object-scale-down object-center shadow-lg
+      bg-russian-blue`}
       src="./mikey-profile.png"
     ></img>
   );
 };
 
 export default ProfilePicture;
+
+ProfilePicture.propTypes = {
+  className: PropTypes.string,
+};

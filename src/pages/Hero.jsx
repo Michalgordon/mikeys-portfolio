@@ -48,7 +48,7 @@ const Hero = () => {
         animate={{ x: "0" }}
         transition={{ duration: 0.7, type: "spring" }}
       >
-        <ProfilePicture></ProfilePicture>
+        <ProfilePicture className={"w-[400px]"}></ProfilePicture>
       </motion.div>
     </div>
   );

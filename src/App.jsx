@@ -17,7 +17,7 @@ function App() {
     <div className="w-full font-poppins flex flex-col h-full bg-white">
       <Header></Header>
       <div className="overflow-auto flex flex-grow">
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense>
           <AnimatePresence>
             <Outlet></Outlet>
           </AnimatePresence>

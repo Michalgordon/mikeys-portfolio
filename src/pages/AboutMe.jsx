@@ -29,11 +29,14 @@ const AboutMe = () => {
         </motion.h2>
         <div className="flex gap-10 justify-center items-center">
           <motion.div
+            className="flex flex-col justify-center"
             initial={{ x: "200%" }}
             animate={{ x: "0" }}
             transition={{ duration: 0.7, type: "spring" }}
           >
-            <ProfilePicture></ProfilePicture>
+            <ProfilePicture
+              className={"min-w-[400px] w-[400px]"}
+            ></ProfilePicture>
           </motion.div>
           <motion.div
             className="flex-col"

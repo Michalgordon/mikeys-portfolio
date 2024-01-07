@@ -37,11 +37,15 @@ input::-webkit-inner-spin-button {
 
 
 @layer components {
-input , textarea {
-  @apply border-russian-blue p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
+input  {
+  @apply border-russian-blue px-5 py-3 text-base w-full border-2 text-gray-500 rounded-[2rem] h-10 box-border outline-none
 }
+textarea{
+  @apply border-russian-blue px-5 py-3 text-base w-full border-2 text-gray-500 rounded-[2rem] box-border outline-none
+}
+
 button, button[type="submit"] {
-  @apply h-10 border-russian-blue p-2 text-base border-2 rounded-md text-white bg-russian-blue box-border uppercase
+  @apply text-base rounded-md  box-border uppercase
 }
 h1, h2, h3{
   @apply text-sea-kelp
@@ -69,6 +73,35 @@ a > .icon {
 .tooltip {
   position: relative;
   display: inline-block;
+}
+
+.msg-bubble{
+  position: relative;
+}
+.msg-bubble:before {
+  width: 20px;
+  background-color: white; /* All tails have the same bg cutout */
+  border-bottom-right-radius: 16px 14px;
+  left:-10px;
+
+  @apply bg-russian-blue
+
+
+}
+
+.msg-bubble:after {
+  width: 20px;
+  background-color: white;
+  border-bottom-right-radius: 16px 14px;
+  left:-20px;
+}
+
+.msg-bubble:before,
+.msg-bubble:after {
+  position: absolute;
+  bottom: 0;
+  height:30px; /* height of our bubble "tail" - should match the border-radius above */
+  content: '';
 }
 
 .tooltip .tooltiptext {
