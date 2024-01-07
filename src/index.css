@@ -36,7 +36,6 @@ input::-webkit-inner-spin-button {
 }
 
 
-
 @layer components {
 input , textarea {
   @apply border-russian-blue p-2 text-base w-full border-2 text-gray-500 rounded-md h-10 box-border outline-none
@@ -64,9 +63,9 @@ a > .icon {
   @apply w-0 inline-block
 }
 
-
-
-
+.section-header{
+  @apply flex justify-end text-5xl font-semibold h-0
+}
 
 .timeline{
   --timeline-width: 2px;

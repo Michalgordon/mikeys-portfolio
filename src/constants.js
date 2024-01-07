@@ -1,16 +1,34 @@
 export const SKILLS = [
-    { title: "Vue", level: 3 },
-    { title: "HTML", level: 3 },
-    { title: "CSS", level: 3 },
-    { title: "Node", level: 3 },
-    { title: "Tailwind", level: 2 },
-    { title: "React", level: 1 },
-    { title: "Git", level: 2 },
-    { title: "REST api", level: 2 },
-    { title: "Python", level: 3 },
-    { title: "Figma", level: 2 },
-    { title: "AWS", level: 1 },
+    { title: "Vue", iconName: "vuejs", info: 'my comfort zone!' },
+    { title: "HTML", iconName: "html5" ,info: 'A major building block' },
+    { title: "CSS", iconName: "css3-alt" , info: 'Love making things look beautiful'},
+    { title: "JavaScript", iconName: "js-square", info: "I mean...what can i say?" },
+    { title: "Node", iconName: "node-js" , info: "For backend & frontend services" },
+    { title: "Tailwind", iconName: "tailwindcss", info: 'Lets go Utility classes!' },
+    { title: "React", iconName: "react", info: "Cant wait to dive deeper!" },
+    { title: "GitHub", iconName: "github", info: "as a part of a team & individually" },
+    { title: "REST api", iconName: "cog-solid", info: "implemented and consumed" },
+    { title: "Python", iconName: "python", info: 'For backend, automatons, and many school projects' },
+    { title: "Figma", iconName: "figma", info: 'where UI components are born' },
+    { title: "AWS", iconName: "aws", info: "DynamoDB, S3, EC2 and AWS Lambda" },
+    { title: "Framer Motion", iconName: "framer-logo", info: "Check out my websites page transitions!" },
+    { title: "Make", iconName: "framer-logo", info: "Automated complex workflows" },
   ];
+  export const SOFT_SKILLS =[
+    { title: "Part of the ship, part of the crew", iconName: "ship-solid", info: "I love being a part of something, and thrive when i work with others" },
+
+  ]
+  export const RANDOM_FACTS = [
+    {"title": "I drink black tea with milk and honey"},
+    {"title": "I love cilantro"},
+    {"title": "nature is my happy place"},
+    {"title": "I tap danced and did trapeze when i was young"},
+    {"title": "I always eat too many cookies"},
+    {"title": "I'm a loud sneezer"},
+    {"title": "starships, mag-boots and any thing Sci-Fi are my jam"},
+    {title: "going to a museums is a fun activity for me"},
+
+  ]
   export const EXPERIENCE_LIST = [
     // {
     //   timeLine: "2022 - now",

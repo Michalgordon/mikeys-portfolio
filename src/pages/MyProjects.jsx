@@ -6,7 +6,7 @@ const MyProjects = () => {
   return (
     <div className="flex flex-col justify-center flex-grow px-20 overflow-hidden">
       <motion.h2
-        className="flex justify-end text-5xl font-semibold h-0"
+        className="section-header"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, type: "spring", bounce: 0.5 }}
@@ -27,7 +27,6 @@ const MyProjects = () => {
   );
 };
 
-//TODO add chrome extension here
 // When I first started at Paradox (formerly Spetz), I was put in charge
 // of a small side project that turned out to be a big deal. I designed
 // and developed a chrome extension using WhatsApp API that was

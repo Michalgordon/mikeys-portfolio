@@ -55,7 +55,7 @@ const ContactMe = () => {
   return (
     <div className="flex flex-col flex-grow justify-center px-20">
       <motion.h2
-        className="flex justify-end text-5xl font-semibold h-0"
+        className="section-header"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, type: "spring", bounce: 0.5 }}

@@ -6,4 +6,7 @@ import ExperienceCard from "./ExperienceCard";
 import ScrollingBanner from "./ScrollingBanner";
 import ProjectCard from "./ProjectCard";
 import ProfilePicture from "./ProfilePicture"
-export { Header, Footer, Skill, Icon, ExperienceCard, ScrollingBanner, ProjectCard, ProfilePicture}
+import RandomFacts from "./RandomFacts";
+import MyExperience from "./MyExperience";
+import Skills from "./skills";
+export { Header, Footer, Skill, Icon, ExperienceCard, ScrollingBanner, ProjectCard, ProfilePicture, RandomFacts, MyExperience, Skills}
