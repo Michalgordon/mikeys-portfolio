@@ -5,14 +5,38 @@ import {
   MyExperience,
   Skills,
 } from "../components";
-import { EXPERIENCE_BLURB } from "../constants";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 
 const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 1 });
 
+  const blurb = (
+    <Fragment>
+      <p>
+        I'm a nomadic full stack developer with over
+        <span className="font-medium"> 3 years of experience</span>. I used to
+        work for a successful startup in Tel Aviv but quit my job to try out a
+        different lifestyle in the States. My partner and I moved into a van and
+        we're slowly making our way around the country while rock climbing,
+        backpacking and absorbing the views.
+      </p>
+      <p>
+        My experience in a small startup made me a{" "}
+        <span className="font-medium">fast and independent learner</span>. I
+        gained a lot of experience with Vue.js, JavaScript, CSS and HTML. Since
+        moving to the States, I've turned my attention to new frameworks that
+        will make me a stronger and more well-rounded developer.
+      </p>
+      <p>
+        Learning on my own and living on the road has been awesome but I'm ready
+        for the next step in my career and look forward to working on cool
+        products and{" "}
+        <span className="font-medium">being part of a team again!</span>
+      </p>
+    </Fragment>
+  );
   return (
     <div className="w-full flex flex-col flex-grow ">
       <div
@@ -39,19 +63,12 @@ const AboutMe = () => {
             ></ProfilePicture>
           </motion.div>
           <motion.div
-            className="flex-col"
+            className="flex flex-col text-xs md:text-base text-justify px-8 gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: "100%" }}
             transition={{ delay: 0.2, ease: "easeOut", duration: 1 }}
           >
-            {EXPERIENCE_BLURB.content.map((paragraph, index) => (
-              <p
-                className="pt-2 px-8 text-xs md:text-base text-justify"
-                key={index}
-              >
-                {paragraph}
-              </p>
-            ))}
+            {blurb}
           </motion.div>
         </div>
         <motion.div
