@@ -5,7 +5,7 @@ const Tooltip = ({ children, tooltip }) => {
     return (
       <div className="tooltip">
         {children}
-        <span className="tooltiptext">{tooltip}</span>
+        <span className="tooltiptext capitalize">{tooltip}</span>
       </div>
     );
   else return children;

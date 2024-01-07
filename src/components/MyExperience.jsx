@@ -6,7 +6,7 @@ const MyExperience = () => {
     <div className="timeline">
       <ProfilePicture
         className={
-          "relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-20 border-2 border-russian-blue bg-russian-blue mb-20"
+          "relative timeline-icon z-10 left-1/2 -translate-x-1/2 w-40 border-2 border-russian-blue bg-russian-blue mb-20"
         }
       ></ProfilePicture>
 
