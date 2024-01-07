@@ -19,14 +19,17 @@ export const SKILLS = [
 
   ]
   export const RANDOM_FACTS = [
-    {"title": "I drink black tea with milk and honey"},
-    {"title": "I love cilantro"},
-    {"title": "nature is my happy place"},
-    {"title": "I tap danced and did trapeze when i was young"},
-    {"title": "I always eat too many cookies"},
-    {"title": "I'm a loud sneezer"},
-    {"title": "starships, mag-boots and any thing Sci-Fi are my jam"},
-    {title: "going to a museums is a fun activity for me"},
+    {"title": "I drink black tea with milk and honey", iconName: "mug-hot-solid"},
+    {"title": "Cilantro is my favorite", iconName: "pagelines"},
+    {"title": "Nature is my happy place", iconName:"mountain-solid"},
+    {"title": "I always eat too many cookies", iconName: "cookie-bite-solid"},
+    {"title": "I'm a loud sneezer", iconName: "volume-up-solid"},
+    {"title": "Starships, mag-boots and anything sci-fi are my jam" , iconName: "robot-solid" },
+    {title: "Going to a museum is a fun activity for me", iconName: "portrait-solid"},
+    {title: "My Phone battery is always low", iconName: "battery-empty-solid"},
+    {title: "I love taking baths", iconName: "bath-solid"},
+
+
 
   ]
   export const EXPERIENCE_LIST = [
