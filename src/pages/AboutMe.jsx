@@ -73,16 +73,16 @@ const AboutMe = () => {
         <div className="flex justify-center items-center pt-20"></div>
         <Skills></Skills>
       </div>
+
+      <div className="flex flex-col gap-12 p-20 shadow-xl">
+        <h2 className="section-header">My Experience.</h2>
+        <MyExperience></MyExperience>
+      </div>
       <div className="flex flex-grow flex-col p-20 shadow-xl">
         <h2 className="section-header">Random Facts.</h2>
         <div className="flex flex-grow flex-col justify-center items-center gap-4 pt-20">
           <RandomFacts></RandomFacts>
         </div>
-      </div>
-
-      <div className="flex flex-col gap-12 p-20">
-        <h2 className="section-header">My Experience.</h2>
-        <MyExperience></MyExperience>
       </div>
     </div>
   );

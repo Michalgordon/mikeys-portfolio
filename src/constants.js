@@ -44,6 +44,15 @@ export const SKILLS = [
     //   iconName: "shuttle-van-solid",
     // },
     {
+      timeLine: "2023 - present",
+      location: "Remote",
+      company: "SafeHeart",
+      title: "Volunteering",
+      info: "A web designer for a cooperative initiative between “Atidim”, Google and Wix for the development of peripheral businesses in the Jerusalem area.",
+      imgSrc: "",
+      iconName: "heartbeat-solid",
+    },
+    {
       timeLine: "2020 - 2022",
       location: "Tel Aviv, Israel",
       company: "Spetz / Paradox",
