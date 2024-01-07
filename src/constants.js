@@ -110,6 +110,7 @@ export const SKILLS = [
         { iconName: "js-square" },
         { iconName: "html5" },
         { iconName: "css3-alt" },
+        {iconName: "framer-logo"},
         { iconName: "tailwindcss" },
       ],
       info: "My personal website that I designed and implemented",
@@ -165,7 +166,7 @@ export const SKILLS = [
       ],
       skills: [
         { iconName: "js-square" },
-        { iconName: "extension-svgrepo-com" },
+        { iconName: "puzzle-piece-solid" },
         { iconName: "whatsapp" },
       ],
       info: "A chrome extension using WhatsApp API written about in Geektime magazine!",
