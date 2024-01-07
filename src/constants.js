@@ -1,16 +1,18 @@
 export const SKILLS = [
     { title: "Vue", iconName: "vuejs", info: 'my comfort zone!' },
+    { title: "React", iconName: "react", info: "Cant wait to dive deeper!" },
     { title: "HTML", iconName: "html5" ,info: 'A major building block' },
     { title: "CSS", iconName: "css3-alt" , info: 'Love making things look beautiful'},
     { title: "JavaScript", iconName: "js-square", info: "I mean...what can i say?" },
     { title: "Node", iconName: "node-js" , info: "For backend & frontend services" },
-    { title: "Tailwind", iconName: "tailwindcss", info: 'Lets go Utility classes!' },
-    { title: "React", iconName: "react", info: "Cant wait to dive deeper!" },
-    { title: "GitHub", iconName: "github", info: "as a part of a team & individually" },
     { title: "REST api", iconName: "cog-solid", info: "implemented and consumed" },
-    { title: "Python", iconName: "python", info: 'For backend, automatons, and many school projects' },
-    { title: "Figma", iconName: "figma", info: 'where UI components are born' },
+    { title: "Python", iconName: "python", info: 'For backend, automation, and many school projects' },
     { title: "AWS", iconName: "aws", info: "DynamoDB, S3, EC2 and AWS Lambda" },
+    { title: "Jest", iconName: "jest-js", info: "Investing in testing" },
+    { title: "GitHub", iconName: "github", info: "as a part of a team & individually" },
+    { title: "Figma", iconName: "figma", info: 'where UI components are born' },
+    { title: "Jira", iconName: "jira", info: 'As a part of an agile team that moves FAST' },
+    { title: "Tailwind", iconName: "tailwindcss", info: 'Lets go Utility classes!' },
     { title: "Framer Motion", iconName: "framer-logo", info: "Check out my websites page transitions!" },
     { title: "Make", iconName: "framer-logo", info: "Automated complex workflows" },
   ];
@@ -19,16 +21,15 @@ export const SKILLS = [
 
   ]
   export const RANDOM_FACTS = [
-    {"title": "I drink black tea with milk and honey", iconName: "mug-hot-solid"},
-    {"title": "Cilantro is my favorite", iconName: "pagelines"},
-    {"title": "Nature is my happy place", iconName:"mountain-solid"},
-    {"title": "I always eat too many cookies", iconName: "cookie-bite-solid"},
-    {"title": "I'm a loud sneezer", iconName: "volume-up-solid"},
-    {"title": "Starships, mag-boots and anything sci-fi are my jam" , iconName: "robot-solid" },
+    {title: "I drink black tea with milk and honey", iconName: "mug-hot-solid"},
+    {title: "Cilantro is my favorite", iconName: "pagelines"},
+    {title: "Nature is my happy place", iconName:"mountain-solid"},
+    {title: "I'm a loud sneezer", iconName: "volume-up-solid"},
+    {title: "Spaceships, mag-boots and anything sci-fi are my jam" , iconName: "robot-solid" },
+    {title: "I always eat too many cookies", iconName: "cookie-bite-solid"},
     {title: "Going to a museum is a fun activity for me", iconName: "portrait-solid"},
     {title: "My Phone battery is always low", iconName: "battery-empty-solid"},
     {title: "I love taking baths", iconName: "bath-solid"},
-
 
 
   ]
