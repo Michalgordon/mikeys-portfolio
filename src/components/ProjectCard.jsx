@@ -12,7 +12,7 @@ const ProjectCard = ({ title, info, links, skills, imgSrc }) => {
           {skills?.map((skill, index) => (
             <Skill
               key={index}
-              title={skill.title}
+              tooltip={skill.tooltip}
               iconName={skill.iconName}
               size="small"
             ></Skill>

@@ -66,6 +66,28 @@ a > .icon {
 .section-header{
   @apply flex justify-end text-5xl font-semibold h-0
 }
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  text-align: center;
+
+  /* Position the tooltip */
+  bottom: 105%;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 1;
+  @apply absolute bg-white border-[1px] text-xs border-pewter-blue rounded-md text-pewter-blue whitespace-nowrap p-1 px-2
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  @apply text-xs
+}
+
 
 .timeline{
   --timeline-width: 2px;
