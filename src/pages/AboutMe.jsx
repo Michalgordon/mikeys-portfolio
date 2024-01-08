@@ -16,24 +16,26 @@ const AboutMe = () => {
     <Fragment>
       <p>
         I'm a nomadic full stack developer with over
-        <span className="font-medium"> 3 years of experience</span>. I used to
-        work for a successful startup in Tel Aviv but quit my job to try out a
-        different lifestyle in the States. My partner and I moved into a van and
-        we're slowly making our way around the country while rock climbing,
+        <span className="font-bold uppercase"> 3 years of experience</span>. I
+        used to work for a successful startup in Tel Aviv but quit my job to try
+        out a different lifestyle in the States. My partner and I are living in
+        a van and slowly making our way around the country while rock climbing,
         backpacking and absorbing the views.
       </p>
       <p>
         My experience in a small startup made me a{" "}
-        <span className="font-medium">fast and independent learner</span>. I
-        gained a lot of experience with Vue.js, JavaScript, CSS and HTML. Since
-        moving to the States, I've turned my attention to new frameworks that
-        will make me a stronger and more well-rounded developer.
+        <span className="font-bold uppercase">
+          fast and independent learner
+        </span>
+        . I gained a lot of experience with Vue.js, JavaScript, CSS and HTML.
+        Since moving to the States, I've turned my attention to new frameworks
+        that will make me a stronger and more well-rounded developer.
       </p>
       <p>
         Learning on my own and living on the road has been awesome but I'm ready
         for the next step in my career and look forward to working on cool
-        products and{" "}
-        <span className="font-medium">being part of a team again!</span>
+        products and being{" "}
+        <span className="font-bold uppercase"> part of a team </span> again!
       </p>
     </Fragment>
   );
