@@ -11,7 +11,7 @@ const ExperienceCard = ({
 }) => {
   return (
     <div
-      className={`group flex flex-col justify-center p-4 rounded-xl text-sm shadow-md ${className} `}
+      className={`group flex flex-col gap-2 justify-center p-4 rounded-xl text-sm shadow-md ${className} `}
     >
       <div className="relative overflow-hidden capitalize flex flex-col ">
         <div className="">
@@ -21,9 +21,16 @@ const ExperienceCard = ({
           <h3 className="text-xs">{location}</h3>
         </div>
       </div>
-      <div>
-        {/* <div className=" text-base whitespace-normal">{info}</div> */}
-      </div>
+      <ul className="flex flex-col gap-1 pl-5 text-xs">
+        {info.map((item, index) => (
+          <li key={index} className="list-disc">
+            <p>
+              <span></span>
+              {item}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
